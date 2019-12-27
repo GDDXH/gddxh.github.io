@@ -45,19 +45,17 @@
   };
 </script>
 
-  <meta name="description" content="前言：适配器模式">
+  <meta name="description" content="前言：cron表达式，用于定时任务">
 <meta property="og:type" content="article">
-<meta property="og:title" content="适配器模式">
-<meta property="og:url" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;2019&#x2F;12&#x2F;26&#x2F;%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F&#x2F;index.html">
+<meta property="og:title" content="cron表达式">
+<meta property="og:url" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;2019&#x2F;12&#x2F;27&#x2F;cron%E8%A1%A8%E8%BE%BE%E5%BC%8F&#x2F;index.html">
 <meta property="og:site_name" content="Husky">
-<meta property="og:description" content="前言：适配器模式">
+<meta property="og:description" content="前言：cron表达式，用于定时任务">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F&#x2F;image-20191226000849675.png">
-<meta property="og:updated_time" content="2019-12-25T16:26:17.045Z">
+<meta property="og:updated_time" content="2019-12-27T15:54:02.702Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F&#x2F;image-20191226000849675.png">
 
-<link rel="canonical" href="https://gddxh.github.io/2019/12/26/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+<link rel="canonical" href="https://gddxh.github.io/2019/12/27/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
 
 
 <script id="page-configurations">
@@ -71,7 +69,7 @@
   };
 </script>
 
-  <title>适配器模式 | Husky</title>
+  <title>cron表达式 | Husky</title>
   
 
 
@@ -187,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gddxh.github.io/2019/12/26/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="https://gddxh.github.io/2019/12/27/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -200,7 +198,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          适配器模式
+          cron表达式
         </h1>
 
         <div class="post-meta">
@@ -211,18 +209,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-12-26 00:04:11 / 修改时间：00:26:17" itemprop="dateCreated datePublished" datetime="2019-12-26T00:04:11+08:00">2019-12-26</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index">
-                    <span itemprop="name">设计模式</span>
-                  </a>
-                </span>
+              <time title="创建时间：2019-12-27 23:51:55 / 修改时间：23:54:02" itemprop="dateCreated datePublished" datetime="2019-12-27T23:51:55+08:00">2019-12-27</time>
             </span>
 
           
@@ -238,14 +225,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
+              <span>693</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -257,25 +244,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>前言：适配器模式</p>
+        <p>前言：cron表达式，用于定时任务</p>
 <a id="more"></a>
 
-<h4 id="适配器模式-Adapter-Pattern"><a href="#适配器模式-Adapter-Pattern" class="headerlink" title="适配器模式(Adapter Pattern)"></a>适配器模式(Adapter Pattern)</h4><p><strong>角色</strong></p>
-<p>目标接口（Target）：客户所期望的接口。</p>
-<p>适配类（Adaptee）：需要适配的类。</p>
-<p>适配器（Adapter）：通过包装一个需要适配的对象，把原接口转成目标接口。</p>
-<p><strong>类图</strong></p>
-<p><img src="/images/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/image-20191226000849675.png" alt="image-20191226000849675"></p>
-<p>这是对象适配器模式，通过实现接口并在适配器中增加适配类实例属性，因为java是单继承，所以这种方式比类适配器模式好</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><p><strong>Adaptee</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/5</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adaptee</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">output220V</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">220</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Target</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/5</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Target</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">output5</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="字段允许值"><a href="#字段允许值" class="headerlink" title="字段允许值"></a>字段允许值</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">秒</span> <span class="number">0</span><span class="number">-59</span> <span class="string">,</span> <span class="bullet">-</span> <span class="string">*</span> <span class="string">/</span></span><br><span class="line"><span class="string">分</span> <span class="number">0</span><span class="number">-59</span> <span class="string">,</span> <span class="bullet">-</span> <span class="string">*</span> <span class="string">/</span></span><br><span class="line"><span class="string">小时</span> <span class="number">0</span><span class="number">-23</span> <span class="string">,</span> <span class="bullet">-</span> <span class="string">*</span> <span class="string">/</span></span><br><span class="line"><span class="string">日期</span> <span class="number">1</span><span class="number">-31</span> <span class="string">,</span> <span class="bullet">-</span> <span class="string">*</span> <span class="string">?</span> <span class="string">/</span> <span class="string">L</span> <span class="string">W</span> <span class="string">C</span></span><br><span class="line"><span class="string">月份</span> <span class="number">1</span><span class="number">-12</span> <span class="string">或者</span> <span class="string">JAN-DEC</span> <span class="string">,</span> <span class="bullet">-</span> <span class="string">*</span> <span class="string">/</span></span><br><span class="line"><span class="string">星期</span> <span class="number">1</span><span class="number">-7</span> <span class="string">或者</span> <span class="string">SUN-SAT</span> <span class="string">,</span> <span class="bullet">-</span> <span class="string">*</span> <span class="string">?</span> <span class="string">/</span> <span class="string">L</span> <span class="string">C</span> <span class="comment">#</span></span><br><span class="line"><span class="string">年（可选）</span> <span class="string">留空,</span> <span class="number">1970</span><span class="number">-2099</span> <span class="string">,</span> <span class="bullet">-</span> <span class="string">*</span> <span class="string">/</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>Adapter</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/5</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adapter</span> <span class="keyword">implements</span>  <span class="title">Target</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Adaptee adaptee;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Adaptee <span class="title">getAdaptee</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> adaptee;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAdaptee</span><span class="params">(Adaptee adaptee)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.adaptee = adaptee;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">output5</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> adaptee.output220V()/<span class="number">44</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Test</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Adaptee adaptee = <span class="keyword">new</span> Adaptee();</span><br><span class="line">        Adapter adapter = <span class="keyword">new</span> Adapter();</span><br><span class="line">        adapter.setAdaptee(adaptee);</span><br><span class="line"></span><br><span class="line">        Target target = adapter;</span><br><span class="line">        System.out.println(target.output5());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="字段含义"><a href="#字段含义" class="headerlink" title="字段含义"></a>字段含义</h4><ul>
+<li>*：代表所有可能的值</li>
+<li>-：指定范围</li>
+<li>,：列出枚举，例如在分钟里，”5,15”表示5分钟和20分钟触发</li>
+<li>/：指定增量，例如在分钟里，”3/15”表示从3分钟开始，没隔15分钟执行一次</li>
+<li>?：表示没有具体的值，使用?要注意冲突</li>
+<li>L：表示last，例如星期中表示7或SAT，月份中表示最后一天31或30，6L表示这个月倒数第6天，FRIL表示这个月的最后一个星期五</li>
+<li>W：只能用在月份中，表示最接近指定天的工作日</li>
+<li>#：只能用在星期中，表示这个月的第几个周几，例如6#3表示这个月的第3个周五</li>
+</ul>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span> * * * * ? 每<span class="number">1</span>分钟触发</span><br><span class="line"><span class="number">30</span> * * * * ? 每<span class="number">30</span>秒触发</span><br><span class="line"><span class="number">30</span> <span class="number">10</span> * * * ? 每小时的<span class="number">10</span>分<span class="number">30</span>秒时触发</span><br><span class="line"><span class="number">30</span> <span class="number">10</span> <span class="number">1</span> * * ? 每天的<span class="number">1</span>点<span class="number">10</span>分<span class="number">30</span>秒时触发</span><br><span class="line"><span class="number">15</span><span class="number">-45</span> * * * * ?  <span class="number">15</span>到<span class="number">45</span>秒内，每秒都触发</span><br><span class="line"><span class="number">0</span> <span class="number">0</span>/<span class="number">3</span> * * * ? 每<span class="number">3</span>分钟触发</span><br><span class="line"><span class="number">0</span> <span class="number">0</span> * * * ? 每天每<span class="number">1</span>小时触发</span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">10</span> * * ? 每天<span class="number">10</span>点触发</span><br><span class="line"><span class="number">0</span> * <span class="number">14</span> * * ? 在每天下午<span class="number">2</span>点到下午<span class="number">2</span>:<span class="number">59</span>期间的每<span class="number">1</span>分钟触发</span><br><span class="line"><span class="number">0</span> <span class="number">30</span> <span class="number">9</span> <span class="number">1</span> * ? 每月<span class="number">1</span>号上午<span class="number">9</span>点半触发</span><br><span class="line"><span class="number">0</span> <span class="number">15</span> <span class="number">10</span> <span class="number">15</span> * ? 每月<span class="number">15</span>日上午<span class="number">10</span>:<span class="number">15</span>触发</span><br><span class="line">*/<span class="number">5</span> * * * * ? 每隔<span class="number">5</span>秒触发</span><br><span class="line"><span class="number">0</span> */<span class="number">1</span> * * * ? 每隔<span class="number">1</span>分钟触发</span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">5</span><span class="number">-15</span> * * ? 每天<span class="number">5</span><span class="number">-15</span>点整点触发</span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> * ? 每月<span class="number">1</span>号凌晨触发</span><br></pre></td></tr></table></figure>
+
+<h4 id="在线cron表达式生成器"><a href="#在线cron表达式生成器" class="headerlink" title="在线cron表达式生成器"></a>在线cron表达式生成器</h4><p><a href="http://cron.qqe2.com/">http://cron.qqe2.com/</a></p>
+
     </div>
 
     
@@ -300,13 +287,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/12/26/Java%E5%8C%85%E8%A3%85%E7%B1%BB/" rel="prev" title="Java包装类">
-      <i class="fa fa-chevron-left"></i> Java包装类
+    <a href="/2019/12/26/String%E3%80%81StringBuffer%E3%80%81StringBuilder/" rel="prev" title="String、StringBuffer、StringBuilder">
+      <i class="fa fa-chevron-left"></i> String、StringBuffer、StringBuilder
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/12/26/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/" rel="next" title="代理模式">
-      代理模式 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -344,7 +328,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#适配器模式-Adapter-Pattern"><span class="nav-number">1.</span> <span class="nav-text">适配器模式(Adapter Pattern)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#字段允许值"><span class="nav-number">1.</span> <span class="nav-text">字段允许值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字段含义"><span class="nav-number">2.</span> <span class="nav-text">字段含义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#示例"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在线cron表达式生成器"><span class="nav-number">4.</span> <span class="nav-text">在线cron表达式生成器</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
