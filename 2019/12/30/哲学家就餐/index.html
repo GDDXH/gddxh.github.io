@@ -45,19 +45,19 @@
   };
 </script>
 
-  <meta name="description" content="前言：适配器模式">
+  <meta name="description" content="前言：经典多线程题目-哲学家就餐，java代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="适配器模式">
-<meta property="og:url" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;2019&#x2F;12&#x2F;26&#x2F;%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F&#x2F;index.html">
+<meta property="og:title" content="哲学家就餐">
+<meta property="og:url" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;2019&#x2F;12&#x2F;30&#x2F;%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%B0%B1%E9%A4%90&#x2F;index.html">
 <meta property="og:site_name" content="Husky">
-<meta property="og:description" content="前言：适配器模式">
+<meta property="og:description" content="前言：经典多线程题目-哲学家就餐，java代码">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F&#x2F;image-20191226000849675.png">
-<meta property="og:updated_time" content="2019-12-25T16:26:17.045Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%B0%B1%E9%A4%90&#x2F;image-20191230001933491.png">
+<meta property="og:updated_time" content="2019-12-29T16:20:30.074Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F&#x2F;image-20191226000849675.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%B0%B1%E9%A4%90&#x2F;image-20191230001933491.png">
 
-<link rel="canonical" href="https://gddxh.github.io/2019/12/26/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+<link rel="canonical" href="https://gddxh.github.io/2019/12/30/%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%B0%B1%E9%A4%90/">
 
 
 <script id="page-configurations">
@@ -71,7 +71,7 @@
   };
 </script>
 
-  <title>适配器模式 | Husky</title>
+  <title>哲学家就餐 | Husky</title>
   
 
 
@@ -187,7 +187,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gddxh.github.io/2019/12/26/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="https://gddxh.github.io/2019/12/30/%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%B0%B1%E9%A4%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -200,7 +200,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          适配器模式
+          哲学家就餐
         </h1>
 
         <div class="post-meta">
@@ -211,7 +211,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-12-26 00:04:11 / 修改时间：00:26:17" itemprop="dateCreated datePublished" datetime="2019-12-26T00:04:11+08:00">2019-12-26</time>
+              <time title="创建时间：2019-12-30 00:12:32 / 修改时间：00:20:30" itemprop="dateCreated datePublished" datetime="2019-12-30T00:12:32+08:00">2019-12-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -219,8 +219,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index">
-                    <span itemprop="name">设计模式</span>
+                  <a href="/categories/JUC/" itemprop="url" rel="index">
+                    <span itemprop="name">JUC</span>
                   </a>
                 </span>
             </span>
@@ -238,7 +238,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -257,25 +257,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>前言：适配器模式</p>
+        <p>前言：经典多线程题目-哲学家就餐，java代码</p>
 <a id="more"></a>
 
-<h4 id="适配器模式-Adapter-Pattern"><a href="#适配器模式-Adapter-Pattern" class="headerlink" title="适配器模式(Adapter Pattern)"></a>适配器模式(Adapter Pattern)</h4><p><strong>角色</strong></p>
-<p>目标接口（Target）：客户所期望的接口。</p>
-<p>适配类（Adaptee）：需要适配的类。</p>
-<p>适配器（Adapter）：通过包装一个需要适配的对象，把原接口转成目标接口。</p>
-<p><strong>类图</strong></p>
-<p><img src="/images/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/image-20191226000849675.png" alt="image-20191226000849675"></p>
-<p>这是对象适配器模式，通过实现接口并在适配器中增加适配类实例属性，因为java是单继承，所以这种方式比类适配器模式好</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><p><strong>Adaptee</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/5</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adaptee</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">output220V</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">220</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Target</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/5</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Target</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">output5</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="哲学家就餐"><a href="#哲学家就餐" class="headerlink" title="哲学家就餐"></a>哲学家就餐</h4><p>问题简述：五位哲学家，五个筷子，当某人又两只筷子时才能进餐。</p>
+<p>为了避免死锁，可以采用同时最多4个人就餐</p>
+<p>使用java Semaphore(信号量),可以对特定资源的允许同时访问的操作数量进行控制在进行操作的时候，需要先acquire获取到许可，才可以继续执行任务，如果获取失败，则进入阻塞；处理完成之后需要release释放许可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.husky.demo.thread;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.Semaphore;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/19</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Philosopher</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> Semaphore maxNum;</span><br><span class="line">    <span class="keyword">private</span> Semaphore[] fork;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Philosopher</span><span class="params">(<span class="keyword">int</span> id, Semaphore maxNum, Semaphore[] fork)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.maxNum = maxNum;</span><br><span class="line">        <span class="keyword">this</span>.fork = fork;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            maxNum.acquire();</span><br><span class="line">            <span class="comment">// 拿起左手筷子</span></span><br><span class="line">            fork[id].acquire();</span><br><span class="line">            <span class="comment">// 拿起右手筷子</span></span><br><span class="line">            fork[(id + <span class="number">1</span>) % <span class="number">5</span>].acquire();</span><br><span class="line">            System.out.println(<span class="string">"第"</span> + (id + <span class="number">1</span>) + <span class="string">"位哲学家 eating"</span>);</span><br><span class="line">            <span class="comment">// 放下右手筷子</span></span><br><span class="line">            fork[(id + <span class="number">1</span>) % <span class="number">5</span>].release();</span><br><span class="line">            <span class="comment">// 放下左手筷子</span></span><br><span class="line">            fork[id].release();</span><br><span class="line">            maxNum.release();</span><br><span class="line">            System.out.println(<span class="string">"第"</span> + (id + <span class="number">1</span>) + <span class="string">"位哲学家结束就餐"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Semaphore maxNum = <span class="keyword">new</span> Semaphore(<span class="number">4</span>);</span><br><span class="line">        Semaphore[] fork = <span class="keyword">new</span> Semaphore[<span class="number">5</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">            fork[i] = <span class="keyword">new</span> Semaphore(<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        Philosopher[] philosophers = <span class="keyword">new</span> Philosopher[<span class="number">5</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>;i++)&#123;</span><br><span class="line">            philosophers[i] = <span class="keyword">new</span> Philosopher(i,maxNum,fork);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(Philosopher i:philosophers)&#123;</span><br><span class="line">            i.start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>Adapter</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/5</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Adapter</span> <span class="keyword">implements</span>  <span class="title">Target</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Adaptee adaptee;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Adaptee <span class="title">getAdaptee</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> adaptee;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAdaptee</span><span class="params">(Adaptee adaptee)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.adaptee = adaptee;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">output5</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> adaptee.output220V()/<span class="number">44</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>Test</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Adaptee adaptee = <span class="keyword">new</span> Adaptee();</span><br><span class="line">        Adapter adapter = <span class="keyword">new</span> Adapter();</span><br><span class="line">        adapter.setAdaptee(adaptee);</span><br><span class="line"></span><br><span class="line">        Target target = adapter;</span><br><span class="line">        System.out.println(target.output5());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p><img src="/images/%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%B0%B1%E9%A4%90/image-20191230001933491.png" alt="image-20191230001933491"></p>
+
     </div>
 
     
@@ -300,13 +291,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/12/26/Java%E5%8C%85%E8%A3%85%E7%B1%BB/" rel="prev" title="Java包装类">
-      <i class="fa fa-chevron-left"></i> Java包装类
+    <a href="/2019/12/28/Mock/" rel="prev" title="Mock">
+      <i class="fa fa-chevron-left"></i> Mock
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/12/26/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/" rel="next" title="代理模式">
-      代理模式 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -344,7 +332,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#适配器模式-Adapter-Pattern"><span class="nav-number">1.</span> <span class="nav-text">适配器模式(Adapter Pattern)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#哲学家就餐"><span class="nav-number">1.</span> <span class="nav-text">哲学家就餐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行结果"><span class="nav-number">2.</span> <span class="nav-text">运行结果</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
