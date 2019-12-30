@@ -54,7 +54,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;AQS%20Node%E7%B1%BB&#x2F;image-20191230003326304.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;AQS%20Node%E7%B1%BB&#x2F;image-20191230003343752.png">
-<meta property="og:updated_time" content="2019-12-29T16:36:07.979Z">
+<meta property="og:updated_time" content="2019-12-30T04:40:22.778Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;AQS%20Node%E7%B1%BB&#x2F;image-20191230003326304.png">
 
@@ -157,7 +157,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">19</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">20</span></a>
 
   </li>
   </ul>
@@ -212,7 +212,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-12-30 00:30:47 / 修改时间：00:36:07" itemprop="dateCreated datePublished" datetime="2019-12-30T00:30:47+08:00">2019-12-30</time>
+              <time title="创建时间：2019-12-30 00:30:47 / 修改时间：12:40:22" itemprop="dateCreated datePublished" datetime="2019-12-30T00:30:47+08:00">2019-12-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -267,7 +267,7 @@
 <p><img src="/images/AQS%20Node%E7%B1%BB/image-20191230003343752.png" alt="image-20191230003343752"></p>
 <h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 后继结点</span></span><br><span class="line"><span class="keyword">volatile</span> Node next;</span><br><span class="line"><span class="comment">// 前驱结点</span></span><br><span class="line"><span class="keyword">volatile</span> Node prev;</span><br><span class="line"><span class="comment">// 线程</span></span><br><span class="line"><span class="keyword">volatile</span> Thread thread;</span><br><span class="line"><span class="comment">// 既可以作为同步队列节点使用，也可以作为Condition的等待队列节点使用。在作为同步队列节点时，nextWaiter可能有两个值：EXCLUSIVE、SHARED标识当前节点是独占模式还是共享模式；在作为等待队列节点使用时，nextWaiter保存后继节点。</span></span><br><span class="line">Node nextWaiter;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 共享模式</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> Node SHARED = <span class="keyword">new</span> Node();</span><br><span class="line"><span class="comment">// 独占模式</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> Node EXCLUSIVE = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结点状态（初始化为0）</span></span><br><span class="line"><span class="keyword">volatile</span> <span class="keyword">int</span> waitStatus;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 标识该线程取消，该结点会被从队列中删除</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> CANCELLED =  <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 标识后继结点处于等待状态，当该节点变化时，后继结点便可运行</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> SIGNAL    = -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 标识当前结点处于Condition条件队列中，其他线程调用了Condition的signal()方法后，节点转移到AQS的等待队列中</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> CONDITION = -<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 共享模式时使用（只在doReleaseShared方法中使用），标识该结点的线程处于可运行状态。</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> PROPAGATE = -<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
 <h4 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h4><p>三种构造函数</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 默认</span></span><br><span class="line">Node() &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node(Thread thread, Node mode) &#123;</span><br><span class="line">    <span class="keyword">this</span>.nextWaiter = mode;</span><br><span class="line">    <span class="keyword">this</span>.thread = thread;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Node(Thread thread, <span class="keyword">int</span> waitStatus) &#123;</span><br><span class="line">    <span class="keyword">this</span>.waitStatus = waitStatus;</span><br><span class="line">    <span class="keyword">this</span>.thread = thread;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 默认构造函数，用于初始化head结点或者共享结点</span></span><br><span class="line">Node() &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 用于addwaiter方法</span></span><br><span class="line">Node(Thread thread, Node mode) &#123;</span><br><span class="line">    <span class="keyword">this</span>.nextWaiter = mode;</span><br><span class="line">    <span class="keyword">this</span>.thread = thread;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 用于创建Condition队列结点</span></span><br><span class="line">Node(Thread thread, <span class="keyword">int</span> waitStatus) &#123;</span><br><span class="line">    <span class="keyword">this</span>.waitStatus = waitStatus;</span><br><span class="line">    <span class="keyword">this</span>.thread = thread;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="isShared"><a href="#isShared" class="headerlink" title="isShared"></a>isShared</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 是否共享</span></span><br><span class="line"><span class="function"><span class="keyword">final</span> <span class="keyword">boolean</span> <span class="title">isShared</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> nextWaiter == SHARED;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -299,7 +299,10 @@
     <a href="/2019/12/30/Semaphore%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/" rel="prev" title="Semaphore源码学习">
       <i class="fa fa-chevron-left"></i> Semaphore源码学习
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2019/12/30/Condition%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/" rel="next" title="Condition源码学习">
+      Condition源码学习 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -353,7 +356,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -399,12 +402,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">100k</span>
+    <span title="站点总字数">109k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:46</span>
+    <span title="站点阅读时长">3:02</span>
 </div>
 
         
