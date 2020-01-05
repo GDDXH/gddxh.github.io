@@ -21,10 +21,10 @@
   var CONFIG = {
     hostname: new URL('https://gddxh.github.io').hostname,
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Muse',
     version: '7.6.0',
     exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    sidebar: {"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},
     copycode: {"enable":true,"show_result":true,"style":null},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
@@ -59,7 +59,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0%E5%88%B0Github&#x2F;image-20200105120401187.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0%E5%88%B0Github&#x2F;image-20200105120352020.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0%E5%88%B0Github&#x2F;image-20200105120339138.png">
-<meta property="og:updated_time" content="2020-01-05T04:06:05.639Z">
+<meta property="og:updated_time" content="2020-01-05T09:11:32.160Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0%E5%88%B0Github&#x2F;image-20200105120302740.png">
 
@@ -145,11 +145,6 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
         <li class="menu-item menu-item-categories">
 
     <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">16</span></a>
@@ -157,7 +152,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">69</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">77</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -237,7 +232,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-05 11:36:00 / 修改时间：12:06:05" itemprop="dateCreated datePublished" datetime="2020-01-05T11:36:00+08:00">2020-01-05</time>
+              <time title="创建时间：2020-01-05 11:36:00 / 修改时间：17:11:32" itemprop="dateCreated datePublished" datetime="2020-01-05T11:36:00+08:00">2020-01-05</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -264,7 +259,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>445</span>
+              <span>570</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -306,7 +301,9 @@
 <p>本次提交并写注释</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"first commit"</span></span><br></pre></td></tr></table></figure>
 <p><img src="/images/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0%E5%88%B0Github/image-20200105120352020.png" alt="image-20200105120352020"></p>
-<h4 id="本次上传"><a href="#本次上传" class="headerlink" title="本次上传"></a>本次上传</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:GDDXH/test.git</span><br></pre></td></tr></table></figure>
+<h4 id="第一次上传"><a href="#第一次上传" class="headerlink" title="第一次上传"></a>第一次上传</h4><p>创建远程仓库并取名为origin</p>
+<p><a href="mailto:git@github.com">git@github.com</a>:GDDXH/test.git是远程仓库路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:GDDXH/test.git</span><br></pre></td></tr></table></figure>
 <p>使用push命令上传文件，指定master主干</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 
@@ -314,6 +311,9 @@
 <p>成功</p>
 <p>另外注意如果仓库已有文件，请先合并</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
+
+<h4 id="之后上传"><a href="#之后上传" class="headerlink" title="之后上传"></a>之后上传</h4><p>以后上传项目，执行下列三条命令就行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"第XX提交注释"</span></span><br><span class="line"></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -355,10 +355,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/03/SSM%E6%90%AD%E5%BB%BA/" rel="prev" title="SSM搭建">
-      <i class="fa fa-chevron-left"></i> SSM搭建
+    <a href="/2020/01/04/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" rel="prev" title="二分查找">
+      <i class="fa fa-chevron-left"></i> 二分查找
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/05/git%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93/" rel="next" title="git命令小结">
+      git命令小结 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -396,7 +399,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#github新建项目"><span class="nav-number">1.</span> <span class="nav-text">github新建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地SSH-KEY配置"><span class="nav-number">2.</span> <span class="nav-text">本地SSH KEY配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地初始化"><span class="nav-number">3.</span> <span class="nav-text">本地初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本次上传"><span class="nav-number">4.</span> <span class="nav-text">本次上传</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#github新建项目"><span class="nav-number">1.</span> <span class="nav-text">github新建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地SSH-KEY配置"><span class="nav-number">2.</span> <span class="nav-text">本地SSH KEY配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本地初始化"><span class="nav-number">3.</span> <span class="nav-text">本地初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第一次上传"><span class="nav-number">4.</span> <span class="nav-text">第一次上传</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#之后上传"><span class="nav-number">5.</span> <span class="nav-text">之后上传</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -412,7 +415,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">77</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -462,15 +465,20 @@
       <i class="fa fa-area-chart"></i>
     </span>
 	站点总字数：
-    <span title="站点总字数">304k</span>
+    <span title="站点总字数">338k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
 	站点阅读时长 ≈
-    <span title="站点阅读时长">8:26</span>
+    <span title="站点阅读时长">9:23</span>
   
 </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.6.0
+  </div>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -511,7 +519,7 @@
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/pisces.js"></script>
+<script src="/js/schemes/muse.js"></script>
 <script src="/js/next-boot.js"></script>
 
 
@@ -538,5 +546,5 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":false},"log":false});</script></body>
 </html>
