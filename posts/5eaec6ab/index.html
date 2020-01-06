@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/husky_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/husky_16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://gddxh.github.io').hostname,
+    root: '/',
+    scheme: 'Muse',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="前言：JUC包，Exchanger源码学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Exchanger源码学习">
+<meta property="og:url" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;posts&#x2F;5eaec6ab&#x2F;index.html">
+<meta property="og:site_name" content="Husky">
+<meta property="og:description" content="前言：JUC包，Exchanger源码学习">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200105194725264.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200105194738499.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200105195101559.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200105195203584.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200105195214394.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200105195225981.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200105195236526.png">
+<meta property="og:updated_time" content="2020-01-06T15:58:40.235Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200105194725264.png">
+
+<link rel="canonical" href="https://gddxh.github.io/posts/5eaec6ab/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Exchanger源码学习 | Husky</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Husky</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">菜到怀疑人生</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">16</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">78</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/gddxh" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gddxh.github.io/posts/5eaec6ab/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="Husky">
+      <meta itemprop="description" content="国家一级保护废物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Husky">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Exchanger源码学习
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-05 18:50:57" itemprop="dateCreated datePublished" datetime="2020-01-05T18:50:57+08:00">2020-01-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-06 23:58:40" itemprop="dateModified" datetime="2020-01-06T23:58:40+08:00">2020-01-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JUC/" itemprop="url" rel="index">
+                    <span itemprop="name">JUC</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>11k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>19 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>前言：JUC包，Exchanger源码学习</p>
+<a id="more"></a>
+<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>Exchanger（交换者）是一个用于线程间协作的工具类。Exchanger用于进行线程间的数据交换。它提供一个同步点，在这个同步点两个线程可以交换彼此的数据。这两个线程通过exchange方法交换数据， </p>
+<p><img src="/images/Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/image-20200105194725264.png" alt="image-20200105194725264"></p>
+<p>如果第一个线程先执行exchange方法，它会一直等待第二个线程也执行exchange，当两个线程都到达同步点时，这两个线程就可以交换数据，将本线程生产出来的数据传递给对方。因此使用Exchanger的重点是成对的线程使用exchange()方法，当有一对线程达到了同步点，就会进行交换数据。</p>
+<h4 id="简单实例"><a href="#简单实例" class="headerlink" title="简单实例"></a>简单实例</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: Exchanger学习</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/10/30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Exchanger&lt;String&gt; exchanger;</span><br><span class="line">    <span class="keyword">private</span> String data;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyThread</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyThread</span><span class="params">(String data, Exchanger&lt;String&gt; exchanger)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">        <span class="keyword">this</span>.exchanger = exchanger;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                TimeUnit.MILLISECONDS.sleep(<span class="number">10</span>);</span><br><span class="line">                System.out.println(Thread.currentThread().getName() + <span class="string">"第"</span> + (i + <span class="number">1</span>) + <span class="string">"次交换前数据："</span> + data);</span><br><span class="line">                data = exchanger.exchange(data);</span><br><span class="line">                System.out.println(Thread.currentThread().getName() + <span class="string">"第"</span> + (i + <span class="number">1</span>) + <span class="string">"次交换后数据："</span> + data);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: 测试</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/10/30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Exchanger&lt;String&gt; exchanger = <span class="keyword">new</span> Exchanger&lt;&gt;();</span><br><span class="line">        MyThread consumer = <span class="keyword">new</span> MyThread(<span class="string">"数据A"</span>,exchanger);</span><br><span class="line">        MyThread producer = <span class="keyword">new</span> MyThread(<span class="string">"数据B"</span>,exchanger);</span><br><span class="line">        consumer.setName(<span class="string">"消费者"</span>);</span><br><span class="line">        producer.setName(<span class="string">"生产者"</span>);</span><br><span class="line">        consumer.start();</span><br><span class="line">        producer.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/image-20200105194738499.png" alt="image-20200105194738499"></p>
+<p>在上述例子中，两个线程中分别调用exchange方法进行数据的交换，当第一个线程执行后会进入等待状态，然后第二个线程调用exchange方法的时候，数据进行交换。</p>
+<h4 id="源码学习"><a href="#源码学习" class="headerlink" title="源码学习"></a>源码学习</h4><h5 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h5><p>Exchanger 内部静态类，Node用于作为结点存储数据,注意一个Node对应两个线程数据，item、match分别存一个线程数据，当两个都不为null时，就进行交换。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 表示线程交换数据结点</span></span><br><span class="line"><span class="meta">@sun</span>.misc.Contended <span class="keyword">static</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 多槽交换使用</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">	<span class="comment">// 索引</span></span><br><span class="line">    <span class="keyword">int</span> index;</span><br><span class="line">	<span class="comment">// 上次记录的Exchanger.bound值</span></span><br><span class="line">    <span class="keyword">int</span> bound;</span><br><span class="line">	<span class="comment">// CAS失败次数</span></span><br><span class="line">    <span class="keyword">int</span> collides;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 单槽、多槽交换使用</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">	<span class="comment">// hash值</span></span><br><span class="line">    <span class="keyword">int</span> hash;      </span><br><span class="line">	<span class="comment">// 线程存储对象</span></span><br><span class="line">    Object item;   </span><br><span class="line">	<span class="comment">// 匹配的对象</span></span><br><span class="line">    <span class="keyword">volatile</span> Object match; </span><br><span class="line">	<span class="comment">// 设置线程park</span></span><br><span class="line">    <span class="keyword">volatile</span> Thread parked; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>@sun.misc.Contended解决伪共享问题，减少内存消耗，提高性能</p>
+<h5 id="Participant"><a href="#Participant" class="headerlink" title="Participant"></a>Participant</h5><p>静态内部类，继承类ThreadLocal类。本身就一个方法，初始化创建Node，所以本质就是ThreadLocal类,用来保存线程本地变量Node</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Participant</span> <span class="keyword">extends</span> <span class="title">ThreadLocal</span>&lt;<span class="title">Node</span>&gt; </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Node <span class="title">initialValue</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> <span class="keyword">new</span> Node(); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// arena数组中两个已使用的slot 之间的索引距离，将它们分开以避免错误的共享,1&lt;&lt;ASHIFT是至少应为缓存大小。</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> ASHIFT = <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// arena数组大小限制为MMASK+1,MMASK一定是2的N次方减1，初始为0xff(255)</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MMASK = <span class="number">0xff</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 绑定字段吧版本号</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> SEQ = MMASK + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// JVM 的 CPU 核数，用于自旋和扩容控制</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> NCPU = Runtime.getRuntime().availableProcessors();</span><br><span class="line"></span><br><span class="line"><span class="comment">// arena 的最大索引值：原则上可以让所有线程不发生竞争</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> FULL = (NCPU &gt;= (MMASK &lt;&lt; <span class="number">1</span>)) ? MMASK : NCPU &gt;&gt;&gt; <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当前线程阻塞等待匹配节点前的自旋次数，CPU==1时不进行自旋</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> SPINS = <span class="number">1</span> &lt;&lt; <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 支持null值作为交换数据</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Object NULL_ITEM = <span class="keyword">new</span> Object();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 交换超时的返回值对象</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Object TIMED_OUT = <span class="keyword">new</span> Object();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Participant对象，本质就是TreadLocal</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> Participant participant;</span><br><span class="line"></span><br><span class="line"><span class="comment">// arena英文是竞技场的意思，这里代表多槽，即一个结点数组，当发生竞争时，多槽交换使用</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> Node[] arena;</span><br><span class="line"></span><br><span class="line"><span class="comment">// slot英文有窄缝、单槽的意思，这里表示单槽交换结点，未发生竞争时，单槽交换使用。slot字段最终会指向首个到达的线程的自身Node结点，表示线程占用了槽位。</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> Node slot;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 最大有效arena数组位置的索引</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">int</span> bound;</span><br></pre></td></tr></table></figure>
+
+
+<p>在定位arena数组的有效槽位时，需要考虑缓存行的影响。由于高速缓存与内存之间是以缓存行为单位交换数据的，根据局部性原理，相邻地址空间的数据会被加载到高速缓存的同一个数据块上（缓存行），而数组是连续的（逻辑，涉及到虚拟内存）内存地址空间，因此，多个slot会被加载到同一个缓存行上，当一个slot改变时，会导致这个slot所在的缓存行上所有的数据（包括其他的slot）无效，需要从内存重新加载，影响性能。下面的属性就是用来解决这个问题的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 对内存直接操作，不安全</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> sun.misc.Unsafe U;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> BOUND;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> SLOT;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> MATCH;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> BLOCKER;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> ABASE;</span><br><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">    <span class="keyword">int</span> s;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        U = sun.misc.Unsafe.getUnsafe();</span><br><span class="line">        Class&lt;?&gt; ek = Exchanger<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">        Class&lt;?&gt; nk = Node<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">        Class&lt;?&gt; ak = Node[]<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">        Class&lt;?&gt; tk = Thread<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">        BOUND = U.objectFieldOffset</span><br><span class="line">            (ek.getDeclaredField(<span class="string">"bound"</span>));</span><br><span class="line">        SLOT = U.objectFieldOffset</span><br><span class="line">            (ek.getDeclaredField(<span class="string">"slot"</span>));</span><br><span class="line">        MATCH = U.objectFieldOffset</span><br><span class="line">            (nk.getDeclaredField(<span class="string">"match"</span>));</span><br><span class="line">        BLOCKER = U.objectFieldOffset</span><br><span class="line">            (tk.getDeclaredField(<span class="string">"parkBlocker"</span>));</span><br><span class="line">        s = U.arrayIndexScale(ak);</span><br><span class="line">        <span class="comment">// ABASE absorbs padding in front of element 0</span></span><br><span class="line">        ABASE = U.arrayBaseOffset(ak) + (<span class="number">1</span> &lt;&lt; ASHIFT);</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> Error(e);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> ((s &amp; (s-<span class="number">1</span>)) != <span class="number">0</span> || s &gt; (<span class="number">1</span> &lt;&lt; ASHIFT))</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> Error(<span class="string">"Unsupported array scale"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h5><p>创建Participant类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Exchanger</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    participant = <span class="keyword">new</span> Participant();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="exchange"><a href="#exchange" class="headerlink" title="exchange"></a>exchange</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> V <span class="title">exchange</span><span class="params">(V x)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Object v;</span><br><span class="line">    <span class="comment">// 判断是否为空，如果是null转换为NULL_ITEM用于交换</span></span><br><span class="line">    Object item = (x == <span class="keyword">null</span>) ? NULL_ITEM : x;</span><br><span class="line">    <span class="keyword">if</span> ((arena != <span class="keyword">null</span> ||</span><br><span class="line">         (v = slotExchange(item, <span class="keyword">false</span>, <span class="number">0L</span>)) == <span class="keyword">null</span>) &amp;&amp;</span><br><span class="line">        ((Thread.interrupted() || <span class="comment">// disambiguates null return</span></span><br><span class="line">          (v = arenaExchange(item, <span class="keyword">false</span>, <span class="number">0L</span>)) == <span class="keyword">null</span>)))</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> InterruptedException();</span><br><span class="line">    <span class="comment">// 返回对象V</span></span><br><span class="line">    <span class="keyword">return</span> (v == NULL_ITEM) ? <span class="keyword">null</span> : (V)v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>核心操作就是if的判断条件，我把这个判断条件格式化一下，如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(</span><br><span class="line">	arena != <span class="keyword">null</span> </span><br><span class="line">	||</span><br><span class="line">	(v = slotExchange(item, <span class="keyword">false</span>, <span class="number">0L</span>)) == <span class="keyword">null</span></span><br><span class="line">) 	</span><br><span class="line">&amp;&amp;</span><br><span class="line">(</span><br><span class="line">	(</span><br><span class="line">		Thread.interrupted() </span><br><span class="line">		||</span><br><span class="line">		(v = arenaExchange(item, <span class="keyword">false</span>, <span class="number">0L</span>)) == <span class="keyword">null</span></span><br><span class="line">	)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>Exchanger有两种数据交换的方式，当并发量低的时候，内部采用“单槽位交换”；并发量高的时候会采用“多槽位交换”。</p>
+<p>arena==null，表示未出现线程竞争，进行单槽位交换，执行slotExchange(item, false, 0L)方法进行数据交换，并将赋值给v</p>
+<p>arena!=null或者单槽交换失败，进行多槽位交换，执行arenaExchange(item, false, 0L)方法进行数据交换，并将赋值给v</p>
+<p><img src="/images/Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/image-20200105195101559.png" alt="image-20200105195101559"></p>
+<p>这个exchange重载方法的区别就是加了时间限制，当超过指定时间回抛出异常</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> V <span class="title">exchange</span><span class="params">(V x, <span class="keyword">long</span> timeout, TimeUnit unit)</span></span></span><br><span class="line"><span class="function">    <span class="keyword">throws</span> InterruptedException, TimeoutException </span>&#123;</span><br><span class="line">    Object v;</span><br><span class="line">    Object item = (x == <span class="keyword">null</span>) ? NULL_ITEM : x;</span><br><span class="line">    <span class="keyword">long</span> ns = unit.toNanos(timeout);</span><br><span class="line">    <span class="keyword">if</span> ((arena != <span class="keyword">null</span> ||</span><br><span class="line">         (v = slotExchange(item, <span class="keyword">true</span>, ns)) == <span class="keyword">null</span>) &amp;&amp;</span><br><span class="line">        ((Thread.interrupted() ||</span><br><span class="line">          (v = arenaExchange(item, <span class="keyword">true</span>, ns)) == <span class="keyword">null</span>)))</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> InterruptedException();</span><br><span class="line">    <span class="keyword">if</span> (v == TIMED_OUT)</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> TimeoutException();</span><br><span class="line">    <span class="keyword">return</span> (v == NULL_ITEM) ? <span class="keyword">null</span> : (V)v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="slotExchange"><a href="#slotExchange" class="headerlink" title="slotExchange"></a>slotExchange</h5><p>单槽交换，没有并发，一个线程先执行exchange方法，另一方再执行exchange方法，然后数据彼此交换</p>
+<p>slotExchange的入参item表示当前线程携带的数据，返回值正常情况下为配对线程携带的数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*单槽交换，在arenas为null时使用</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*<span class="doctag">@param</span> item代表要交换的数据</span></span><br><span class="line"><span class="comment">*<span class="doctag">@param</span> timed为true表示定时</span></span><br><span class="line"><span class="comment">*<span class="doctag">@param</span> 如果为定时，NS表示最大等待时间，否则0L</span></span><br><span class="line"><span class="comment">*<span class="doctag">@return</span> 其它配对线程的数据; 如果多槽交换被激活或被中断返回null, 如果超时返回TIMED_OUT(一个Obejct对象)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">final</span> Object <span class="title">slotExchange</span><span class="params">(Object item, <span class="keyword">boolean</span> timed, <span class="keyword">long</span> ns)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 当前线程交换结点</span></span><br><span class="line">    Node p = participant.get();</span><br><span class="line">    Thread t = Thread.currentThread();</span><br><span class="line">    <span class="comment">// 线程的中断状态检查</span></span><br><span class="line">    <span class="keyword">if</span> (t.isInterrupted())</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    <span class="comment">// CAS循环</span></span><br><span class="line">    <span class="keyword">for</span> (Node q;;) &#123;</span><br><span class="line">        <span class="comment">// slot!=null 代表已经有线程先抢占了slot，此时就可以与这个线程交换数据</span></span><br><span class="line">        <span class="keyword">if</span> ((q = slot) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// CAS操作，将slot从p设为null</span></span><br><span class="line">            <span class="keyword">if</span> (U.compareAndSwapObject(<span class="keyword">this</span>, SLOT, q, <span class="keyword">null</span>)) &#123;</span><br><span class="line">                <span class="comment">// 获取交换值</span></span><br><span class="line">                Object v = q.item;</span><br><span class="line">                <span class="comment">// 设置交换值</span></span><br><span class="line">                q.match = item;</span><br><span class="line">                Thread w = q.parked;</span><br><span class="line">                <span class="comment">// 如果先来的线程堵塞了，则唤醒在此槽位等待的线程</span></span><br><span class="line">                <span class="keyword">if</span> (w != <span class="keyword">null</span>)</span><br><span class="line">                    U.unpark(w);</span><br><span class="line">                <span class="comment">// 交换成功, 返回结果</span></span><br><span class="line">                <span class="keyword">return</span> v;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// CAS操作失败，CPU核数多于1个, 且bound为0时创建arena数组，并将bound设置为SEQ大小</span></span><br><span class="line">            <span class="keyword">if</span> (NCPU &gt; <span class="number">1</span> &amp;&amp; bound == <span class="number">0</span> &amp;&amp;</span><br><span class="line">                U.compareAndSwapInt(<span class="keyword">this</span>, BOUND, <span class="number">0</span>, SEQ))</span><br><span class="line">                arena = <span class="keyword">new</span> Node[(FULL + <span class="number">2</span>) &lt;&lt; ASHIFT];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (arena != <span class="keyword">null</span>)</span><br><span class="line">            <span class="comment">// slot == null &amp;&amp; arena != null，说明在第一个线程单槽交换时，初始化了arena，结束单槽交换并才是多槽交换</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// slot==null&amp;&amp;arena==null，CAS操作将slot从null设为p，成功就break</span></span><br><span class="line">            p.item = item;</span><br><span class="line">            <span class="keyword">if</span> (U.compareAndSwapObject(<span class="keyword">this</span>, SLOT, <span class="keyword">null</span>, p))</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// CAS操作失败, 继续下一次自旋</span></span><br><span class="line">            p.item = <span class="keyword">null</span>; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 执行到这, 说明当前线程先到达, 且已经占用了slot槽（就是else中CAS操作成功然后break跳出循环）, 需要等待配对线程到达</span></span><br><span class="line">    <span class="keyword">int</span> h = p.hash;</span><br><span class="line">    <span class="keyword">long</span> end = timed ? System.nanoTime() + ns : <span class="number">0L</span>;</span><br><span class="line">    <span class="comment">// 根据处理器数目，决定自旋次数，如果NCPU==1，自旋1次（也就是不自旋），NCPU&gt;1，就自旋SPINS次（1 &lt;&lt; 10）</span></span><br><span class="line">    <span class="keyword">int</span> spins = (NCPU &gt; <span class="number">1</span>) ? SPINS : <span class="number">1</span>;</span><br><span class="line">    Object v;</span><br><span class="line">    <span class="keyword">while</span> ((v = p.match) == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="comment">// 自旋</span></span><br><span class="line">        <span class="keyword">if</span> (spins &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// 随机释放CPU</span></span><br><span class="line">            h ^= h &lt;&lt; <span class="number">1</span>;</span><br><span class="line">            h ^= h &gt;&gt;&gt; <span class="number">3</span>;</span><br><span class="line">            h ^= h &lt;&lt; <span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span> (h == <span class="number">0</span>)</span><br><span class="line">                h = SPINS | (<span class="keyword">int</span>)t.getId();</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (h &lt; <span class="number">0</span> &amp;&amp; (--spins &amp; ((SPINS &gt;&gt;&gt; <span class="number">1</span>) - <span class="number">1</span>)) == <span class="number">0</span>)</span><br><span class="line">                Thread.yield();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// spins==0&amp;&amp;slot!=p,说明有新的线程到达并抢占了slot，此时就可以与其交换数据, 但是还未完全准备好, 所以重新设置自旋次数让其再自旋等一下</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (slot != p)</span><br><span class="line">            spins = SPINS;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (!t.isInterrupted() &amp;&amp; arena == <span class="keyword">null</span> &amp;&amp;</span><br><span class="line">                 (!timed || (ns = end - System.nanoTime()) &gt; <span class="number">0L</span>)) &#123;</span><br><span class="line">            <span class="comment">// 自旋结束，但没有等不到配对, 此时才阻塞当前线程</span></span><br><span class="line">            U.putObject(t, BLOCKER, <span class="keyword">this</span>);</span><br><span class="line">            p.parked = t;</span><br><span class="line">            <span class="comment">// 堵塞线程</span></span><br><span class="line">            <span class="keyword">if</span> (slot == p)</span><br><span class="line">                U.park(<span class="keyword">false</span>, ns);</span><br><span class="line">            p.parked = <span class="keyword">null</span>;</span><br><span class="line">            U.putObject(t, BLOCKER, <span class="keyword">null</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 自旋结束，遇到超时等情况，腾出slot给其他线程使用</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (U.compareAndSwapObject(<span class="keyword">this</span>, SLOT, p, <span class="keyword">null</span>)) &#123;</span><br><span class="line">            v = timed &amp;&amp; ns &lt;= <span class="number">0L</span> &amp;&amp; !t.isInterrupted() ? TIMED_OUT : <span class="keyword">null</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    U.putOrderedObject(p, MATCH, <span class="keyword">null</span>);</span><br><span class="line">    p.item = <span class="keyword">null</span>;</span><br><span class="line">    p.hash = h;</span><br><span class="line">    <span class="keyword">return</span> v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/image-20200105195203584.png" alt="image-20200105195203584"></p>
+<p>简单的说单槽交换，就是第一个进程抢占slot字段，然后自旋等待（自旋结束根据情况进行下一步操作，可能堵塞、结束、超时、重新自旋等等），然后第二个线程进来与第一个吸纳城交换数据并设置slot为null。</p>
+<p>交换数据后，两个线程分别返回匹配数据（就是对方的数据，或者后交换后得到的数据）</p>
+<p>arean可以看做是一个并发符号（当然本质是一个数组，用于存储N个线程结点），arean!=null说明并发量大，需要使用多槽交换，至于自旋次数、CPU释放等等，都是优化操作，不必深入探究。</p>
+<p>这样，两个线程就实现了数据交换，整个过程都没有用到同步操作。</p>
+<h5 id="arenaExchange"><a href="#arenaExchange" class="headerlink" title="arenaExchange"></a>arenaExchange</h5><p>多槽交换比单槽交换要复杂很多。当并发量大时使用多槽交换，但是如何判断并发量是否大？通过上文单槽交换的源码，我们可以知道，当单槽CAS操作失败，说明同时有多个配对线程竞争修改slot槽位，此时就会初始化arena数组并开始多槽交换，如下图</p>
+<p><img src="/images/Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/image-20200105195214394.png" alt="image-20200105195214394"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">final</span> Object <span class="title">arenaExchange</span><span class="params">(Object item, <span class="keyword">boolean</span> timed, <span class="keyword">long</span> ns)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// arena多槽交换数组</span></span><br><span class="line">    Node[] a = arena;</span><br><span class="line">    <span class="comment">// 当前线程携带的交换结点</span></span><br><span class="line">    Node p = participant.get();</span><br><span class="line">    <span class="comment">// 当前线程的arena索引</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = p.index;;) &#123;</span><br><span class="line">        <span class="keyword">int</span> b, m, c; </span><br><span class="line">        <span class="keyword">long</span> j;</span><br><span class="line">        <span class="comment">// 从arena数组中选出偏移地址为(i &lt;&lt; ASHIFT) + ABASE的元素, 即真正可用的Node，这里是直接对内存操作</span></span><br><span class="line">        Node q = (Node)U.getObjectVolatile(a, j = (i &lt;&lt; ASHIFT) + ABASE);</span><br><span class="line">        <span class="comment">// CASE1: 槽不为空，说明已经有线程到达并在等待了</span></span><br><span class="line">        <span class="keyword">if</span> (q != <span class="keyword">null</span> &amp;&amp; U.compareAndSwapObject(a, j, q, <span class="keyword">null</span>)) &#123;</span><br><span class="line">            <span class="comment">// 获取已经到达的线程所携带的值</span></span><br><span class="line">            Object v = q.item; </span><br><span class="line">            <span class="comment">// 把当前线程携带的值交换给已经到达的线程</span></span><br><span class="line">            q.match = item;</span><br><span class="line">            <span class="comment">// q.parked指向已经到达的线程，如果堵塞，则唤醒已经到达的线程</span></span><br><span class="line">            Thread w = q.parked;</span><br><span class="line">            <span class="keyword">if</span> (w != <span class="keyword">null</span>)</span><br><span class="line">                U.unpark(w);</span><br><span class="line">            <span class="comment">// 返回交换后的数据</span></span><br><span class="line">            <span class="keyword">return</span> v;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// CASE2: 槽位有效并且为空</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (i &lt;= (m = (b = bound) &amp; MMASK) &amp;&amp; q == <span class="keyword">null</span>) &#123;</span><br><span class="line">            p.item = item;</span><br><span class="line">            <span class="comment">// CAS操作，将该槽位从null设为p</span></span><br><span class="line">            <span class="keyword">if</span> (U.compareAndSwapObject(a, j, <span class="keyword">null</span>, p)) &#123;</span><br><span class="line">                <span class="comment">// 如果限定时间，则需要计算结束时间</span></span><br><span class="line">                <span class="keyword">long</span> end = (timed &amp;&amp; m == <span class="number">0</span>) ? System.nanoTime() + ns : <span class="number">0L</span>;</span><br><span class="line">                <span class="comment">// 获取当前线程</span></span><br><span class="line">                Thread t = Thread.currentThread();</span><br><span class="line">                <span class="comment">// 自旋,期间查看有没其它配对线程到达该槽位</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> h = p.hash, spins = SPINS;;) &#123;</span><br><span class="line">                    Object v = p.match;</span><br><span class="line">                    <span class="comment">// 有配对线程到达了该槽位</span></span><br><span class="line">                    <span class="keyword">if</span> (v != <span class="keyword">null</span>) &#123;</span><br><span class="line">                        <span class="comment">//交换结束并清除，注意交换操作在CASE1中，这里负责换后的清除操作</span></span><br><span class="line">                        U.putOrderedObject(p, MATCH, <span class="keyword">null</span>);</span><br><span class="line">                        p.item = <span class="keyword">null</span>; </span><br><span class="line">                        p.hash = h;</span><br><span class="line">                        <span class="comment">// 返回配对线程交换过来的值</span></span><br><span class="line">                        <span class="keyword">return</span> v;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (spins &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                        <span class="comment">// 随机释放CPU</span></span><br><span class="line">                        h ^= h &lt;&lt; <span class="number">1</span>;</span><br><span class="line">                        h ^= h &gt;&gt;&gt; <span class="number">3</span>;</span><br><span class="line">                        h ^= h &lt;&lt; <span class="number">10</span>;</span><br><span class="line">                        <span class="comment">// 初始化Hash</span></span><br><span class="line">                        <span class="keyword">if</span> (h == <span class="number">0</span>)</span><br><span class="line">                            h = SPINS | (<span class="keyword">int</span>)t.getId();</span><br><span class="line">                        <span class="comment">// 50%的可能h&lt;0,如果整个条件为true，就释放CPU</span></span><br><span class="line">                        <span class="keyword">else</span> <span class="keyword">if</span> (h &lt; <span class="number">0</span> &amp;&amp;</span><br><span class="line">                                 (--spins &amp; ((SPINS &gt;&gt;&gt; <span class="number">1</span>) - <span class="number">1</span>)) == <span class="number">0</span>)</span><br><span class="line">                            Thread.yield();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="comment">//spins==0&amp;&amp;slot!=p,说明有新的线程到达并抢占了slot，此时就可以与其交换数据, 但是还未完全准备好, 所以重新设置自旋次数让其再自旋等一下</span></span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (U.getObjectVolatile(a, j) != p)</span><br><span class="line">                        spins = SPINS;       <span class="comment">// releaser hasn't set match yet</span></span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (!t.isInterrupted() &amp;&amp; m == <span class="number">0</span> &amp;&amp;</span><br><span class="line">                             (!timed ||</span><br><span class="line">                              (ns = end - System.nanoTime()) &gt; <span class="number">0L</span>)) &#123;</span><br><span class="line">                        <span class="comment">// 等不到配对线程了, 阻塞当前线程</span></span><br><span class="line">                        U.putObject(t, BLOCKER, <span class="keyword">this</span>);</span><br><span class="line">                        <span class="comment">// 在结点引用当前线程，以便配对线程到达后唤醒我</span></span><br><span class="line">                        p.parked = t;</span><br><span class="line">                        <span class="keyword">if</span> (U.getObjectVolatile(a, j) == p)</span><br><span class="line">                            U.park(<span class="keyword">false</span>, ns);</span><br><span class="line">                        p.parked = <span class="keyword">null</span>;</span><br><span class="line">                        U.putObject(t, BLOCKER, <span class="keyword">null</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">if</span> (U.getObjectVolatile(a, j) == p &amp;&amp;</span><br><span class="line">                             U.compareAndSwapObject(a, j, p, <span class="keyword">null</span>)) &#123;</span><br><span class="line">                        <span class="comment">// 尝试缩减arena槽数组的大小</span></span><br><span class="line">                        <span class="keyword">if</span> (m != <span class="number">0</span>)</span><br><span class="line">                            U.compareAndSwapInt(<span class="keyword">this</span>, BOUND, b, b + SEQ - <span class="number">1</span>);</span><br><span class="line">                        p.item = <span class="keyword">null</span>;</span><br><span class="line">                        p.hash = h;</span><br><span class="line">                        i = p.index &gt;&gt;&gt;= <span class="number">1</span>;</span><br><span class="line">                        <span class="keyword">if</span> (Thread.interrupted())</span><br><span class="line">                            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">                        <span class="keyword">if</span> (timed &amp;&amp; m == <span class="number">0</span> &amp;&amp; ns &lt;= <span class="number">0L</span>)</span><br><span class="line">                            <span class="keyword">return</span> TIMED_OUT;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// CAS操作失败，clear</span></span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                p.item = <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// CASE3: 无效槽位位置, 需要扩容</span></span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (p.bound != b) &#123;</span><br><span class="line">                p.bound = b;</span><br><span class="line">                p.collides = <span class="number">0</span>;</span><br><span class="line">                i = (i != m || m == <span class="number">0</span>) ? m : m - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> ((c = p.collides) &lt; m || m == FULL ||</span><br><span class="line">                     !U.compareAndSwapInt(<span class="keyword">this</span>, BOUND, b, b + SEQ + <span class="number">1</span>)) &#123;</span><br><span class="line">                p.collides = c + <span class="number">1</span>;</span><br><span class="line">                i = (i == <span class="number">0</span>) ? m : i - <span class="number">1</span>; </span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="comment">// 扩容</span></span><br><span class="line">                i = m + <span class="number">1</span>;</span><br><span class="line">            p.index = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>arenaExchange方法的整体流程和slotExchange方法类似，主要区别在于使用了arena槽数组，然后使用了需要计算命中。</p>
+<p>如果槽位被占用，说明已经有线程先到了，之后的处理和slotExchange一样；</p>
+<p>如果槽位有效且为null，说明当前线程是先到的，就占用槽位，然后按照：spin-&gt;yield-&gt;block这种锁升级的顺序进行优化的等待，等不到配对线程就会进入阻塞。</p>
+<p>另外，由于arenaExchange利用了槽数组，所以涉及到槽数组的扩容和缩减问题，也就是CASE2与CASE3中涉及的操作，这里就不深入</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>单槽交换示意图：</p>
+<p><img src="/images/Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/image-20200105195225981.png" alt="image-20200105195225981"></p>
+<p>多槽交换示意图：</p>
+<p><img src="/images/Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/image-20200105195236526.png" alt="image-20200105195236526"><br><strong>参考</strong></p>
+<p><a href="https://segmentfault.com/a/1190000015963932#item-3-1">Java多线程进阶（二一）—— J.U.C之synchronizer框架：Exchanger</a></p>
+<p><a href="https://www.cnblogs.com/zhuxudong/p/10124099.html">Exchanger 源码分析</a></p>
+
+    </div>
+
+    
+    
+    
+	<div>
+	  
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+	  
+	</div>
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Husky
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://gddxh.github.io/posts/5eaec6ab/" title="Exchanger源码学习">https://gddxh.github.io/posts/5eaec6ab/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/9bc1cf0b/" rel="prev" title="git命令小结">
+      <i class="fa fa-chevron-left"></i> git命令小结
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/c9baebcc/" rel="next" title="CyclicBarrier源码学习">
+      CyclicBarrier源码学习 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简单实例"><span class="nav-number">2.</span> <span class="nav-text">简单实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#源码学习"><span class="nav-number">3.</span> <span class="nav-text">源码学习</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Node"><span class="nav-number">3.1.</span> <span class="nav-text">Node</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Participant"><span class="nav-number">3.2.</span> <span class="nav-text">Participant</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#属性"><span class="nav-number">3.3.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#构造函数"><span class="nav-number">3.4.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#exchange"><span class="nav-number">3.5.</span> <span class="nav-text">exchange</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#slotExchange"><span class="nav-number">3.6.</span> <span class="nav-text">slotExchange</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#arenaExchange"><span class="nav-number">3.7.</span> <span class="nav-text">arenaExchange</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Husky"
+      src="/images/author.jpg">
+  <p class="site-author-name" itemprop="name">Husky</p>
+  <div class="site-description" itemprop="description">国家一级保护废物</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/GDDXH" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;GDDXH" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Husky</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+	站点总字数：
+    <span title="站点总字数">340k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+	站点阅读时长 ≈
+    <span title="站点阅读时长">9:27</span>
+  
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.6.0
+  </div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" style="display: inline;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" style="display: inline;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":false},"log":false});</script></body>
+</html>

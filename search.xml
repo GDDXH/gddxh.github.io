@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>ReentrantLock CLH队列出队入队流程</title>
-    <url>/2020/01/05/ReentrantLockCLH%E9%98%9F%E5%88%97%E5%87%BA%E9%98%9F%E5%85%A5%E9%98%9F%E6%B5%81%E7%A8%8B/</url>
+    <url>/posts/85e512fe/</url>
     <content><![CDATA[<p>前言：学习了ReentrantLock各个方法，但是对这个锁的一个完整流程还是有点懵，所以总结一下ReentrantLock CLH队列出队入队流程</p>
 <a id="more"></a>
 
@@ -53,7 +53,7 @@
   </entry>
   <entry>
     <title>ReentrantLock源码学习</title>
-    <url>/2020/01/05/ReentrantLock%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</url>
+    <url>/posts/b9e155b5/</url>
     <content><![CDATA[<p>前言：JUC包，ReentrantLock源码学习</p>
 <a id="more"></a>
 
@@ -137,7 +137,7 @@
   </entry>
   <entry>
     <title>CountDownLatch源码学习</title>
-    <url>/2020/01/05/CountDownLatch%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</url>
+    <url>/posts/8676cd23/</url>
     <content><![CDATA[<p>前言：JUC包，CountDownLatch源码学习</p>
 <a id="more"></a>
 
@@ -183,7 +183,7 @@
   </entry>
   <entry>
     <title>CyclicBarrier源码学习</title>
-    <url>/2020/01/05/CyclicBarrier%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</url>
+    <url>/posts/c9baebcc/</url>
     <content><![CDATA[<p>前言：JUC包，CyclicBarrier源码学习</p>
 <a id="more"></a>
 
@@ -241,7 +241,7 @@
   </entry>
   <entry>
     <title>Exchanger源码学习</title>
-    <url>/2020/01/05/Exchanger%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</url>
+    <url>/posts/5eaec6ab/</url>
     <content><![CDATA[<p>前言：JUC包，Exchanger源码学习</p>
 <a id="more"></a>
 <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>Exchanger（交换者）是一个用于线程间协作的工具类。Exchanger用于进行线程间的数据交换。它提供一个同步点，在这个同步点两个线程可以交换彼此的数据。这两个线程通过exchange方法交换数据， </p>
@@ -308,7 +308,7 @@
   </entry>
   <entry>
     <title>git命令小结</title>
-    <url>/2020/01/05/git%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93/</url>
+    <url>/posts/9bc1cf0b/</url>
     <content><![CDATA[<p>前言：记录一下自己平时git命令的一些使用</p>
 <a id="more"></a>
 
@@ -343,7 +343,7 @@
   </entry>
   <entry>
     <title>索引基础</title>
-    <url>/2020/01/05/%E7%B4%A2%E5%BC%95%E5%9F%BA%E7%A1%80/</url>
+    <url>/posts/d836f991/</url>
     <content><![CDATA[<p>前言：索引基础</p>
 <a id="more"></a>
 
@@ -407,7 +407,7 @@
   </entry>
   <entry>
     <title>本地项目上传到Github</title>
-    <url>/2020/01/05/%E6%9C%AC%E5%9C%B0%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0%E5%88%B0Github/</url>
+    <url>/posts/924a5560/</url>
     <content><![CDATA[<p>前言：如何将本地项目上传到Github</p>
 <a id="more"></a>
 
@@ -450,7 +450,7 @@
   </entry>
   <entry>
     <title>二分查找</title>
-    <url>/2020/01/04/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</url>
+    <url>/posts/e8eb0481/</url>
     <content><![CDATA[<p>前言：二分查找的思路简单，但是细节需要格外注意</p>
 <a id="more"></a>
 
@@ -477,7 +477,7 @@
   </entry>
   <entry>
     <title>SSM搭建</title>
-    <url>/2020/01/03/SSM%E6%90%AD%E5%BB%BA/</url>
+    <url>/posts/7e15a87c/</url>
     <content><![CDATA[<p>前言：平时习惯用Springboot了，今天重新做一个SSM项目，发现很麻烦，所以就总结一下，方便下次搭建</p>
 <a id="more"></a>
 
@@ -540,7 +540,7 @@
   </entry>
   <entry>
     <title>AbstractQueuedSynchronizer源码学习</title>
-    <url>/2020/01/03/AbstractQueuedSynchronizer%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</url>
+    <url>/posts/9b10c13b/</url>
     <content><![CDATA[<p>前言：什么是AQS？之前我一直不懂，网上看了一些文章也是似懂非懂，所以今天我从源码学习，将这个类源码全部啃下来。</p>
 <a id="more"></a>
 
@@ -735,7 +735,7 @@
   </entry>
   <entry>
     <title>java反射2</title>
-    <url>/2020/01/02/java%E5%8F%8D%E5%B0%842/</url>
+    <url>/posts/3cee122f/</url>
     <content><![CDATA[<p>前言：java反射2,本章主要学习总结invoke方法</p>
 <a id="more"></a>
 
@@ -835,7 +835,7 @@
   </entry>
   <entry>
     <title>java反射1</title>
-    <url>/2020/01/02/java%E5%8F%8D%E5%B0%841/</url>
+    <url>/posts/a5e74395/</url>
     <content><![CDATA[<p>前言：java反射1,本章总结了反射概念、反射的方法及实例等</p>
 <a id="more"></a>
 
@@ -886,7 +886,7 @@
   </entry>
   <entry>
     <title>注解</title>
-    <url>/2020/01/02/%E6%B3%A8%E8%A7%A3/</url>
+    <url>/posts/a70f4376/</url>
     <content><![CDATA[<p>前言：平时用的最多是Spring注解等框架注解，发现自己对底层不是很了解，所以来复习一下java基础之注解</p>
 <a id="more"></a>
 
@@ -972,7 +972,7 @@
   </entry>
   <entry>
     <title>Java程序编译和运行</title>
-    <url>/2020/01/02/Java%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%AF%91%E5%92%8C%E8%BF%90%E8%A1%8C/</url>
+    <url>/posts/73182e26/</url>
     <content><![CDATA[<p>前言：Java程序编译和运行</p>
 <a id="more"></a>
 
@@ -1002,7 +1002,7 @@
   </entry>
   <entry>
     <title>Java内存分区</title>
-    <url>/2020/01/02/Java%E5%86%85%E5%AD%98%E5%88%86%E5%8C%BA/</url>
+    <url>/posts/c27d2278/</url>
     <content><![CDATA[<p>前言：Java内存分区</p>
 <a id="more"></a>
 
@@ -1021,7 +1021,7 @@
   </entry>
   <entry>
     <title>类加载器与双亲委派模型</title>
-    <url>/2020/01/02/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E4%B8%8E%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B/</url>
+    <url>/posts/c40656c8/</url>
     <content><![CDATA[<p>前言：总结一下类加载器与双亲委派模型</p>
 <a id="more"></a>
 
@@ -1063,7 +1063,7 @@
   </entry>
   <entry>
     <title>JDBC连接数据库</title>
-    <url>/2020/01/02/JDBC%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <url>/posts/b9dbc731/</url>
     <content><![CDATA[<p>前言：复习一下java连接数据库‘最原始’的方法</p>
 <a id="more"></a>
 
@@ -1083,7 +1083,7 @@
   </entry>
   <entry>
     <title>join</title>
-    <url>/2020/01/02/join/</url>
+    <url>/posts/2861d8d7/</url>
     <content><![CDATA[<p>前言：Thread.join方法</p>
 <a id="more"></a>
 
@@ -1116,7 +1116,7 @@
   </entry>
   <entry>
     <title>线程池如何合理配置核心线程数</title>
-    <url>/2020/01/02/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%A6%82%E4%BD%95%E5%90%88%E7%90%86%E9%85%8D%E7%BD%AE%E6%A0%B8%E5%BF%83%E7%BA%BF%E7%A8%8B%E6%95%B0/</url>
+    <url>/posts/5ce86f42/</url>
     <content><![CDATA[<p>前言：线程池核心线程数设置</p>
 <a id="more"></a>
 
@@ -1136,7 +1136,7 @@
   </entry>
   <entry>
     <title>springboot+dubbo简单实例</title>
-    <url>/2020/01/02/springboot-dubbo%E7%AE%80%E5%8D%95%E5%AE%9E%E4%BE%8B/</url>
+    <url>/posts/13d6d0e3/</url>
     <content><![CDATA[<p>前言:springboot+dubbo一个非常简单的例子</p>
 <a id="more"></a>
 
@@ -1187,7 +1187,7 @@
   </entry>
   <entry>
     <title>idea 使用@Autowired注解警告</title>
-    <url>/2020/01/02/idea%E4%BD%BF%E7%94%A8@Autowired%E6%B3%A8%E8%A7%A3%E8%AD%A6%E5%91%8A/</url>
+    <url>/posts/2ea2c1a8/</url>
     <content><![CDATA[<p>前言：遇到的一个警告，虽然没必要管，但是因为闲就总结一下</p>
 <a id="more"></a>
 
@@ -1221,7 +1221,7 @@
   </entry>
   <entry>
     <title>Spliterator</title>
-    <url>/2020/01/02/Spliterator/</url>
+    <url>/posts/4661a89d/</url>
     <content><![CDATA[<p>前言：之前看ArrayList源码时，碰到了Spliterator，今天就从源码学习一下</p>
 <a id="more"></a>
 
@@ -1247,7 +1247,7 @@
   </entry>
   <entry>
     <title>ArrayList-removeIf方法总结</title>
-    <url>/2020/01/02/ArrayList-removeIf%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</url>
+    <url>/posts/c713a47d/</url>
     <content><![CDATA[<p>前言：因为这个方法是java8新增，稍复杂，所以单独讲<br> <a id="more"></a></p>
 <h4 id="removeIf"><a href="#removeIf" class="headerlink" title="removeIf"></a>removeIf</h4><p>根据自定义的规则去除集合中数据</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">removeIf</span><span class="params">(Predicate&lt;? <span class="keyword">super</span> E&gt; filter)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 判断对象是否为空</span></span><br><span class="line">    Objects.requireNonNull(filter);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> removeCount = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">final</span> BitSet removeSet = <span class="keyword">new</span> BitSet(size);</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> expectedModCount = modCount;</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> size = <span class="keyword">this</span>.size;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; modCount == expectedModCount &amp;&amp; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">        <span class="keyword">final</span> E element = (E) elementData[i];</span><br><span class="line">        <span class="keyword">if</span> (filter.test(element)) &#123;</span><br><span class="line">            removeSet.set(i);</span><br><span class="line">            removeCount++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (modCount != expectedModCount) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> ConcurrentModificationException();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">boolean</span> anyToRemove = removeCount &gt; <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (anyToRemove) &#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">int</span> newSize = size - removeCount;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>, j=<span class="number">0</span>; (i &lt; size) &amp;&amp; (j &lt; newSize); i++, j++) &#123;</span><br><span class="line">            i = removeSet.nextClearBit(i);</span><br><span class="line">            elementData[j] = elementData[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k=newSize; k &lt; size; k++) &#123;</span><br><span class="line">            elementData[k] = <span class="keyword">null</span>;  <span class="comment">// Let gc do its work</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.size = newSize;</span><br><span class="line">        <span class="keyword">if</span> (modCount != expectedModCount) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> ConcurrentModificationException();</span><br><span class="line">        &#125;</span><br><span class="line">        modCount++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> anyToRemove;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1267,7 +1267,7 @@
   </entry>
   <entry>
     <title>ArrayListSpliterator内部类总结</title>
-    <url>/2020/01/02/ArrayListSpliterator%E5%86%85%E9%83%A8%E7%B1%BB%E6%80%BB%E7%BB%93/</url>
+    <url>/posts/f8f05b84/</url>
     <content><![CDATA[<p>前言：ArrayListSpliterator是ArrayList的静态内部类，本文将从源码分析与学习ArrayListSpliterator类<br> <a id="more"></a></p>
 <h4 id="ArrayListSpliterator简介"><a href="#ArrayListSpliterator简介" class="headerlink" title="ArrayListSpliterator简介"></a>ArrayListSpliterator简介</h4><p>ArrayListSpliterator实现了Spliterator接口，能并行遍历ArrayList集合，特征值为Spliterator.ORDERED | Spliterator.SIZED | Spliterator.SUBSIZED;</p>
 <p><img src="/images/ArrayListSpliterator%E5%86%85%E9%83%A8%E7%B1%BB%E6%80%BB%E7%BB%93/image-20200102002324367.png" alt="image-20200102002324367"></p>
@@ -1286,7 +1286,7 @@
   </entry>
   <entry>
     <title>ArrayList-replaceAll方法总结</title>
-    <url>/2020/01/02/ArrayList-replaceAll%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</url>
+    <url>/posts/a5fb9fe7/</url>
     <content><![CDATA[<p>前言：因为这个方法是java8新增，稍复杂，所以单独讲<br> <a id="more"></a></p>
 <h4 id="replaceAll方法"><a href="#replaceAll方法" class="headerlink" title="replaceAll方法"></a>replaceAll方法</h4><p>replaceAll是Java8新增方法，作用是用函数接口的返回结果替代原list中的值</p>
 <p>参数是UnaryOperator，也就是一元操作符的意思，也就是函数式接口（函数式接口可以简化为lambda表达式）</p>
@@ -1311,7 +1311,7 @@
   </entry>
   <entry>
     <title>Vector和Stack</title>
-    <url>/2020/01/02/Vector%E5%92%8CStack/</url>
+    <url>/posts/6e7e8046/</url>
     <content><![CDATA[<p>前言：Vector和Stack虽然已经被弃用了，但是还是复习总结一下吧</p>
 <a id="more"></a>
 
@@ -1337,7 +1337,7 @@
   </entry>
   <entry>
     <title>spring源码学习-BeanDefinition</title>
-    <url>/2020/01/02/spring%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0-BeanDefinition/</url>
+    <url>/posts/bdf25357/</url>
     <content><![CDATA[<p>前言：Spring BeanDefinition学习</p>
 <a id="more"></a>
 <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>BeanDefinition是一个顶端接口，用于保存Bean的相关信息，类图如下：</p>
@@ -1369,7 +1369,7 @@
   </entry>
   <entry>
     <title>Spring源码学习-AbstractBeanDefinition</title>
-    <url>/2020/01/02/Spring%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0-AbstractBeanDefinition/</url>
+    <url>/posts/4576d537/</url>
     <content><![CDATA[<p>前言：Spring源码学习-AbstractBeanDefinition</p>
 <a id="more"></a>
 <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>AbstractBeanDefinition继承了BeanMetadataAttributeAccessor类，实现了BeanDefinition与Cloneable接口，类图如下</p>
@@ -1446,7 +1446,7 @@
   </entry>
   <entry>
     <title>redis安装</title>
-    <url>/2020/01/01/redis%E5%AE%89%E8%A3%85/</url>
+    <url>/posts/4f6a7f8e/</url>
     <content><![CDATA[<p>前言：记录一下本人redis安装过程</p>
 <a id="more"></a>
 
@@ -1520,7 +1520,7 @@
   </entry>
   <entry>
     <title>Java正则</title>
-    <url>/2020/01/01/Java%E6%AD%A3%E5%88%99/</url>
+    <url>/posts/a4208b05/</url>
     <content><![CDATA[<p>前言：使用java正则表达式来处理字符串</p>
 <a id="more"></a>
 
@@ -1551,7 +1551,7 @@
   </entry>
   <entry>
     <title>静态块与构造块</title>
-    <url>/2020/01/01/%E9%9D%99%E6%80%81%E5%9D%97%E4%B8%8E%E6%9E%84%E9%80%A0%E5%9D%97/</url>
+    <url>/posts/5a1d2c06/</url>
     <content><![CDATA[<p>前言：最近在面试题或者面试上老是提到静态块、构造块等执行顺序，这里总结一下</p>
 <a id="more"></a>
 
@@ -1579,7 +1579,7 @@
   </entry>
   <entry>
     <title>参数传递</title>
-    <url>/2020/01/01/%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/</url>
+    <url>/posts/350b832e/</url>
     <content><![CDATA[<p>前言：Java 参数传递是值传递还是引用传递？</p>
 <a id="more"></a>
 
@@ -1610,7 +1610,7 @@
   </entry>
   <entry>
     <title>浅拷贝与深拷贝</title>
-    <url>/2020/01/01/%E6%B5%85%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B7%B1%E6%8B%B7%E8%B4%9D/</url>
+    <url>/posts/2ba55f9f/</url>
     <content><![CDATA[<p>前言：学习总结浅拷贝与深拷贝</p>
 <a id="more"></a>
 
@@ -1669,7 +1669,7 @@
   </entry>
   <entry>
     <title>Socket实现一对一通信</title>
-    <url>/2020/01/01/Socket%E5%AE%9E%E7%8E%B0%E4%B8%80%E5%AF%B9%E4%B8%80%E9%80%9A%E4%BF%A1/</url>
+    <url>/posts/aae6d6e1/</url>
     <content><![CDATA[<p>前言：以前写的一个Socket实现一对一通信的例子</p>
 <a id="more"></a>
 
@@ -1682,7 +1682,7 @@
   </entry>
   <entry>
     <title>Java8-Lambda</title>
-    <url>/2020/01/01/Java8-Lambda/</url>
+    <url>/posts/1d25fbbd/</url>
     <content><![CDATA[<p>前言:学习一下java8新的Lambda表达式</p>
 <a id="more"></a>
 
@@ -1710,7 +1710,7 @@
   </entry>
   <entry>
     <title>innodb中各种SQL语句加锁分析</title>
-    <url>/2020/01/01/innodb%E4%B8%AD%E5%90%84%E7%A7%8DSQL%E8%AF%AD%E5%8F%A5%E5%8A%A0%E9%94%81%E5%88%86%E6%9E%90/</url>
+    <url>/posts/e593a295/</url>
     <content><![CDATA[<p>前言：总结一下各种SQL语句加锁分析</p>
 <a id="more"></a>
 
@@ -1747,7 +1747,7 @@
   </entry>
   <entry>
     <title>Next+Typora图片设置</title>
-    <url>/2020/01/01/Next-Typora%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE/</url>
+    <url>/posts/f9ba92c1/</url>
     <content><![CDATA[<p>前言：Next博客图片显示是一个问题，本人使用Typora，Typora不仅能解决图片问题，而且还是一款非常优秀的Markdown编辑器</p>
 <a id="more"></a>
 
@@ -1764,7 +1764,7 @@
   </entry>
   <entry>
     <title>Next主题添加搜索功能</title>
-    <url>/2020/01/01/Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
+    <url>/posts/6f90e1e1/</url>
     <content><![CDATA[<p>前言：Next主题添加搜索功能</p>
 <a id="more"></a>
 
@@ -1784,7 +1784,7 @@
   </entry>
   <entry>
     <title>辗转相除法与更相减损术</title>
-    <url>/2020/01/01/%E8%BE%97%E8%BD%AC%E7%9B%B8%E9%99%A4%E6%B3%95%E4%B8%8E%E6%9B%B4%E7%9B%B8%E5%87%8F%E6%8D%9F%E6%9C%AF/</url>
+    <url>/posts/307dc33e/</url>
     <content><![CDATA[<p>前言：辗转相除法与更相减损术</p>
 <a id="more"></a>
 
@@ -1824,7 +1824,7 @@
   </entry>
   <entry>
     <title>数据库事务</title>
-    <url>/2020/01/01/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/</url>
+    <url>/posts/587418e1/</url>
     <content><![CDATA[<p>前言：复习并总结数据库事务</p>
 <a id="more"></a>
 
@@ -1971,7 +1971,7 @@
   </entry>
   <entry>
     <title>Next主题配置</title>
-    <url>/2020/01/01/Next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</url>
+    <url>/posts/d144b0f9/</url>
     <content><![CDATA[<p>前言：本人博客Next主题配置</p>
 <a id="more"></a>
 
@@ -2058,7 +2058,7 @@
   </entry>
   <entry>
     <title>hexo+github博客搭建</title>
-    <url>/2020/01/01/hexo-github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <url>/posts/b4a23979/</url>
     <content><![CDATA[<p>前言：Hexo 是一个快速、简洁且高效的博客框架。本文将记录本人第一次使用hexo+github搭建个人博客的过程，供各位参考</p>
 <a id="more"></a>
 
@@ -2153,7 +2153,7 @@
   </entry>
   <entry>
     <title>堆排序</title>
-    <url>/2020/01/01/%E5%A0%86%E6%8E%92%E5%BA%8F/</url>
+    <url>/posts/c2a5fdc5/</url>
     <content><![CDATA[<p>前言：总结堆排序</p>
 <a id="more"></a>
 
@@ -2213,7 +2213,7 @@
   </entry>
   <entry>
     <title>spring拦截器和过滤器</title>
-    <url>/2020/01/01/spring%E6%8B%A6%E6%88%AA%E5%99%A8%E5%92%8C%E8%BF%87%E6%BB%A4%E5%99%A8/</url>
+    <url>/posts/173208b6/</url>
     <content><![CDATA[<p>前言:通过案例，总结一下spring拦截器和过滤器</p>
 <a id="more"></a>
 
@@ -2245,7 +2245,7 @@
   </entry>
   <entry>
     <title>innodb锁</title>
-    <url>/2020/01/01/innodb%E9%94%81/</url>
+    <url>/posts/25bfe26d/</url>
     <content><![CDATA[<p>前言：初涉innodb锁，把目前学到的先总结一下</p>
 <a id="more"></a>
 
@@ -2312,7 +2312,7 @@
   </entry>
   <entry>
     <title>计时</title>
-    <url>/2019/12/31/%E8%AE%A1%E6%97%B6/</url>
+    <url>/posts/c078c1ad/</url>
     <content><![CDATA[<p>前言：记录一下java计时，方便下次用</p>
 <a id="more"></a>
 
@@ -2327,7 +2327,7 @@
   </entry>
   <entry>
     <title>1115-交替打印FooBar</title>
-    <url>/2019/12/31/1115-%E4%BA%A4%E6%9B%BF%E6%89%93%E5%8D%B0FooBar/</url>
+    <url>/posts/3e3af18a/</url>
     <content><![CDATA[<p>前言：学习JUC包后，通过leetcode多线程的题目练习一下,1115-交替打印FooBar</p>
 <a id="more"></a>
 
@@ -2352,7 +2352,7 @@
   </entry>
   <entry>
     <title>1117-H2O生成</title>
-    <url>/2019/12/31/1117-H2O%E7%94%9F%E6%88%90/</url>
+    <url>/posts/7dccc2b9/</url>
     <content><![CDATA[<p>前言：学习JUC包后，通过leetcode多线程的题目练习一下,1117-H2O生成</p>
 <a id="more"></a>
 
@@ -2367,7 +2367,7 @@
   </entry>
   <entry>
     <title>1195-交替打印字符串</title>
-    <url>/2019/12/31/1195-%E4%BA%A4%E6%9B%BF%E6%89%93%E5%8D%B0%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <url>/posts/ee84f4c2/</url>
     <content><![CDATA[<p>前言：学习JUC包后，通过leetcode多线程的题目练习一下,1195-交替打印字符串</p>
 <a id="more"></a>
 
@@ -2383,7 +2383,7 @@
   </entry>
   <entry>
     <title>1116-打印零与奇偶数</title>
-    <url>/2019/12/31/1116-%E6%89%93%E5%8D%B0%E9%9B%B6%E4%B8%8E%E5%A5%87%E5%81%B6%E6%95%B0/</url>
+    <url>/posts/c476bb57/</url>
     <content><![CDATA[<p>前言：学习JUC包后，通过leetcode多线程的题目练习一下,1116-打印零与奇偶数</p>
 <a id="more"></a>
 
@@ -2396,7 +2396,7 @@
   </entry>
   <entry>
     <title>1226-哲学家进餐</title>
-    <url>/2019/12/31/1226-%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90/</url>
+    <url>/posts/1a65e957/</url>
     <content><![CDATA[<p>前言：学习JUC包后，通过leetcode多线程的题目练习一下,1226-哲学家进餐</p>
 <a id="more"></a>
 
@@ -2410,7 +2410,7 @@
   </entry>
   <entry>
     <title>1114-按序打印</title>
-    <url>/2019/12/31/1114-%E6%8C%89%E5%BA%8F%E6%89%93%E5%8D%B0/</url>
+    <url>/posts/ab4e4baa/</url>
     <content><![CDATA[<p>前言：学习JUC包后，通过leetcode多线程的题目练习一下,1114-按序打印</p>
 <a id="more"></a>
 
@@ -2427,7 +2427,7 @@
   </entry>
   <entry>
     <title>mybatis增删改查</title>
-    <url>/2019/12/31/mybatis%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/</url>
+    <url>/posts/46db188b/</url>
     <content><![CDATA[<p>前言：总结一下自己平时写的mybatis增删改查语句，方便以后参考</p>
 <a id="more"></a>
 
@@ -2459,7 +2459,7 @@
   </entry>
   <entry>
     <title>使用Mybatis-Generator自动生成文件</title>
-    <url>/2019/12/31/%E4%BD%BF%E7%94%A8Mybatis-Generator%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6/</url>
+    <url>/posts/766ba01f/</url>
     <content><![CDATA[<p>前言：Mybatis属于半自动ORM，我们可以利用Mybatis-Generator来帮我们自动生成相关文件。此处以mysql为例.</p>
 <a id="more"></a>
 
@@ -2501,7 +2501,7 @@
   </entry>
   <entry>
     <title>hikariCP与druid连接池的使用</title>
-    <url>/2019/12/31/hikariCP%E4%B8%8Edruid%E8%BF%9E%E6%8E%A5%E6%B1%A0%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <url>/posts/fe70e6a/</url>
     <content><![CDATA[<p>前言： hikariCP与druid连接池的使用</p>
 <a id="more"></a>
 
@@ -2523,7 +2523,7 @@
   </entry>
   <entry>
     <title>通用mapper介绍</title>
-    <url>/2019/12/30/%E9%80%9A%E7%94%A8mapper%E4%BB%8B%E7%BB%8D/</url>
+    <url>/posts/2a211269/</url>
     <content><![CDATA[<p>前言：学习一个 mybatis插件的使用</p>
 <a id="more"></a>
 
@@ -2569,7 +2569,7 @@
   </entry>
   <entry>
     <title>Condition源码学习</title>
-    <url>/2019/12/30/Condition%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</url>
+    <url>/posts/67be310d/</url>
     <content><![CDATA[<p>前言：JUC包，Condition源码学习</p>
 <a id="more"></a>
 
@@ -2636,7 +2636,7 @@
   </entry>
   <entry>
     <title>AQS Node类</title>
-    <url>/2019/12/30/AQS%20Node%E7%B1%BB/</url>
+    <url>/posts/1822d39f/</url>
     <content><![CDATA[<p>前言：JUC包，AQS 内部类 Node 源码学习</p>
 <a id="more"></a>
 
@@ -2657,7 +2657,7 @@
   </entry>
   <entry>
     <title>Semaphore源码学习</title>
-    <url>/2019/12/30/Semaphore%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</url>
+    <url>/posts/1f7ab301/</url>
     <content><![CDATA[<p>前言：JUC包，Semaphore 源码学习</p>
 <a id="more"></a>
 
@@ -2766,7 +2766,7 @@
   </entry>
   <entry>
     <title>哲学家就餐</title>
-    <url>/2019/12/30/%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%B0%B1%E9%A4%90/</url>
+    <url>/posts/1b8f9bef/</url>
     <content><![CDATA[<p>前言：经典多线程题目-哲学家就餐，java代码</p>
 <a id="more"></a>
 
@@ -2783,7 +2783,7 @@
   </entry>
   <entry>
     <title>Mock</title>
-    <url>/2019/12/28/Mock/</url>
+    <url>/posts/9f015355/</url>
     <content><![CDATA[<p>前言：学习一下Mock测试</p>
 <a id="more"></a>
 
@@ -2839,7 +2839,7 @@
   </entry>
   <entry>
     <title>树的遍历</title>
-    <url>/2019/12/28/%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/</url>
+    <url>/posts/332b8f17/</url>
     <content><![CDATA[<p>前言：复习并总结树的遍历方式</p>
 <a id="more"></a>
 
@@ -2873,7 +2873,7 @@
   </entry>
   <entry>
     <title>cron表达式</title>
-    <url>/2019/12/27/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <url>/posts/d9609bd1/</url>
     <content><![CDATA[<p>前言：cron表达式，用于定时任务</p>
 <a id="more"></a>
 
@@ -2899,7 +2899,7 @@
   </entry>
   <entry>
     <title>Java控制台输入输出</title>
-    <url>/2019/12/26/Java%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+    <url>/posts/75e8be45/</url>
     <content><![CDATA[<p>前言：简单的输入输出，非常基础</p>
 <a id="more"></a>
 
@@ -2919,7 +2919,7 @@
   </entry>
   <entry>
     <title>String、StringBuffer、StringBuilder</title>
-    <url>/2019/12/26/String%E3%80%81StringBuffer%E3%80%81StringBuilder/</url>
+    <url>/posts/6d8d2fdb/</url>
     <content><![CDATA[<p>前言：之前对着三者关系有点模糊，今天做个笔记总结一下</p>
 <a id="more"></a>
 
@@ -3010,7 +3010,7 @@
   </entry>
   <entry>
     <title>序列化</title>
-    <url>/2019/12/26/%E5%BA%8F%E5%88%97%E5%8C%96/</url>
+    <url>/posts/693bdb7c/</url>
     <content><![CDATA[<p>前言：因为dubbo的问题，补一下Java序列化的基础知识</p>
 <a id="more"></a>
 
@@ -3077,7 +3077,7 @@
   </entry>
   <entry>
     <title>泛型</title>
-    <url>/2019/12/26/%E6%B3%9B%E5%9E%8B/</url>
+    <url>/posts/7678a22a/</url>
     <content><![CDATA[<p>前言：复习并总结一下java泛型</p>
 <a id="more"></a>
 
@@ -3108,7 +3108,7 @@
   </entry>
   <entry>
     <title>单例模式</title>
-    <url>/2019/12/26/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
+    <url>/posts/f1601c3e/</url>
     <content><![CDATA[<p>前言：单例模式</p>
 <a id="more"></a>
 
@@ -3141,7 +3141,7 @@
   </entry>
   <entry>
     <title>工厂模式</title>
-    <url>/2019/12/26/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
+    <url>/posts/54788f73/</url>
     <content><![CDATA[<p>前言：工厂模式</p>
 <a id="more"></a>
 
@@ -3163,7 +3163,7 @@
   </entry>
   <entry>
     <title>责任链模式</title>
-    <url>/2019/12/26/%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F/</url>
+    <url>/posts/6208627e/</url>
     <content><![CDATA[<p>前言：责任链模式</p>
 <a id="more"></a>
 
@@ -3182,7 +3182,7 @@
   </entry>
   <entry>
     <title>代理模式</title>
-    <url>/2019/12/26/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/</url>
+    <url>/posts/7b510e10/</url>
     <content><![CDATA[<p>前言：代理模式</p>
 <a id="more"></a>
 
@@ -3215,7 +3215,7 @@
   </entry>
   <entry>
     <title>适配器模式</title>
-    <url>/2019/12/26/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/</url>
+    <url>/posts/f5c535ea/</url>
     <content><![CDATA[<p>前言：适配器模式</p>
 <a id="more"></a>
 
@@ -3241,7 +3241,7 @@
   </entry>
   <entry>
     <title>Java包装类</title>
-    <url>/2019/12/26/Java%E5%8C%85%E8%A3%85%E7%B1%BB/</url>
+    <url>/posts/a72ffe8a/</url>
     <content><![CDATA[<p>前言：巩固基础，复习总结一下Java包装类</p>
 <a id="more"></a>
 
@@ -3295,8 +3295,151 @@
       </categories>
   </entry>
   <entry>
+    <title>剑指offer下</title>
+    <url>/posts/ecc7cac1/</url>
+    <content><![CDATA[<p>前言：剑指offer下</p>
+<a id="more"></a>
+
+<h4 id="数字在排序数组中出现的次数"><a href="#数字在排序数组中出现的次数" class="headerlink" title="数字在排序数组中出现的次数"></a>数字在排序数组中出现的次数</h4><p>二分查找</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">GetNumberOfK</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = array.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> leftK, rightK;</span><br><span class="line">        <span class="comment">// 查找</span></span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (array[mid] == k) &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[mid] &lt; k) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        leftK = left;</span><br><span class="line">        right = array.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (array[mid] == k) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[mid] &lt; k) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        rightK = right;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> rightK - leftK + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="二叉树的深度"><a href="#二叉树的深度" class="headerlink" title="二叉树的深度"></a>二叉树的深度</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">TreeDepth</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> left = TreeDepth(root.left);</span><br><span class="line">        <span class="keyword">int</span> right = TreeDepth(root.right);</span><br><span class="line">        <span class="keyword">return</span> left &gt; right ? left + <span class="number">1</span> : right + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h4><p>判断左右节点深度是否相差1</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> balance = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">IsBalanced_Solution</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        getDepth(root);</span><br><span class="line">        <span class="keyword">return</span> balance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getDepth</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> leftDepth = getDepth(node.left);</span><br><span class="line">        <span class="keyword">int</span> rightDepth = getDepth(node.right);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (Math.abs(leftDepth - rightDepth) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">            balance = <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> leftDepth &gt; rightDepth ? leftDepth + <span class="number">1</span> : rightDepth + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="数组中只出现一次的数字"><a href="#数组中只出现一次的数字" class="headerlink" title="数组中只出现一次的数字"></a>数组中只出现一次的数字</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">FindNumsAppearOnce</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> num1[], <span class="keyword">int</span> num2[])</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : array) &#123;</span><br><span class="line">            <span class="keyword">if</span> (set.contains(i)) &#123;</span><br><span class="line">                set.remove(i);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                set.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Iterator&lt;Integer&gt; iterator = set.iterator();</span><br><span class="line">        num1[<span class="number">0</span>] = iterator.next();</span><br><span class="line">        num2[<span class="number">0</span>] = iterator.next();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="和为S的连续正数序列"><a href="#和为S的连续正数序列" class="headerlink" title="和为S的连续正数序列"></a>和为S的连续正数序列</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&gt;&lt;Integer&gt;&gt; FindContinuousSequence(<span class="keyword">int</span> sum) &#123;</span><br><span class="line">        ArrayList&lt;ArrayList&gt;&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;ArrayList&gt;&lt;Integer&gt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">1</span>, right = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">            <span class="keyword">int</span> currentSum = (left + right) * (right - left + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (currentSum == sum) &#123;</span><br><span class="line">                ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = left; i &lt;= right; i++) &#123;</span><br><span class="line">                    list.add(i);</span><br><span class="line">                &#125;</span><br><span class="line">                result.add(list);</span><br><span class="line">                right++;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (currentSum &lt; sum) &#123;</span><br><span class="line">                right++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="和为S的两个数字"><a href="#和为S的两个数字" class="headerlink" title="和为S的两个数字"></a>和为S的两个数字</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">FindNumbersWithSum</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">    ArrayList&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = array.length - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">        <span class="keyword">if</span> (array[left] + array[right] == sum) &#123;</span><br><span class="line">            result.add(array[left]);</span><br><span class="line">            result.add(array[right]);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[left] + array[right] &lt; sum) &#123;</span><br><span class="line">            left++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            right--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="左旋转字符串"><a href="#左旋转字符串" class="headerlink" title="左旋转字符串"></a>左旋转字符串</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">LeftRotateString</span><span class="params">(String str, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str.length() &lt; n) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> str.substring(n) + str.substring(<span class="number">0</span>, n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="翻转单词顺序列"><a href="#翻转单词顺序列" class="headerlink" title="翻转单词顺序列"></a>翻转单词顺序列</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">ReverseSentence</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str.trim().equals(<span class="string">""</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> str;</span><br><span class="line">        &#125;</span><br><span class="line">        String s[] = str.split(<span class="string">" "</span>);</span><br><span class="line">        StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = s.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            stringBuilder.append(s[i]);</span><br><span class="line">            stringBuilder.append(<span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stringBuilder.toString().trim();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="扑克牌顺子"><a href="#扑克牌顺子" class="headerlink" title="扑克牌顺子"></a>扑克牌顺子</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isContinuous</span><span class="params">(<span class="keyword">int</span>[] numbers)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (numbers == <span class="keyword">null</span> || numbers.length &lt; <span class="number">5</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> max = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> min = <span class="number">14</span>;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : numbers) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (set.contains(i)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    set.add(i);</span><br><span class="line">                    <span class="keyword">if</span> (i &lt; min) &#123;</span><br><span class="line">                        min = i;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (i &gt; max) &#123;</span><br><span class="line">                        max = i;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (max - min) &lt; <span class="number">5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="孩子们的游戏-圆圈中最后剩下的数"><a href="#孩子们的游戏-圆圈中最后剩下的数" class="headerlink" title="孩子们的游戏(圆圈中最后剩下的数)"></a>孩子们的游戏(圆圈中最后剩下的数)</h4><p>模拟约瑟夫环</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        <span class="keyword">int</span> i = -<span class="number">1</span>, step = m, count = n;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="keyword">if</span> (i &gt;= n) &#123;</span><br><span class="line">                i = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (array[i] == <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (--step == <span class="number">0</span>) &#123;</span><br><span class="line">                array[i] = <span class="number">1</span>;</span><br><span class="line">                step = m;</span><br><span class="line">                count--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 返回最后一个出局的人位置</span></span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>数学公式：f(n,k)=(f(n-1,k)+k)%n</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (LastRemaining_Solution(n - <span class="number">1</span>, m) + m) % n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="求1-2-3-…-n"><a href="#求1-2-3-…-n" class="headerlink" title="求1+2+3+…+n"></a>求1+2+3+…+n</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Sum_Solution</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = (<span class="keyword">int</span>) (Math.pow(n, <span class="number">2</span>) + n);</span><br><span class="line">        <span class="keyword">return</span> sum &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="不用加减乘除做加法"><a href="#不用加减乘除做加法" class="headerlink" title="不用加减乘除做加法"></a>不用加减乘除做加法</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Add</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Integer.sum(num1, num2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="把字符串转换成整数"><a href="#把字符串转换成整数" class="headerlink" title="把字符串转换成整数"></a>把字符串转换成整数</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">StrToInt</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str.equals(<span class="string">""</span>) || str.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">char</span>[] arr = str.toCharArray();</span><br><span class="line">        <span class="keyword">boolean</span> negative = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (arr[<span class="number">0</span>] == <span class="string">'-'</span>) &#123;</span><br><span class="line">            negative = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i = (arr[<span class="number">0</span>] == <span class="string">'-'</span> || arr[<span class="number">0</span>] == <span class="string">'+'</span>) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; arr.length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[i] &lt; <span class="number">48</span> || arr[i] &gt; <span class="number">57</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            sum = sum * <span class="number">10</span> + arr[i] - <span class="number">48</span>;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        sum = negative ? sum * -<span class="number">1</span> : sum;</span><br><span class="line">        <span class="keyword">if</span> (sum &gt; Integer.MAX_VALUE || sum &lt; Integer.MIN_VALUE) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="数组中重复的数字"><a href="#数组中重复的数字" class="headerlink" title="数组中重复的数字"></a>数组中重复的数字</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> numbers[], <span class="keyword">int</span> length, <span class="keyword">int</span>[] duplication)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        duplication[<span class="number">0</span>] = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (numbers == <span class="keyword">null</span> || length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : numbers) &#123;</span><br><span class="line">            <span class="keyword">if</span> (set.contains(i)) &#123;</span><br><span class="line">                duplication[<span class="number">0</span>] = i;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            set.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="构建乘积数组"><a href="#构建乘积数组" class="headerlink" title="构建乘积数组"></a>构建乘积数组</h4><p><img src="/images/%E5%89%91%E6%8C%87offer%E4%B8%8B/image-20191225000513934.png" alt="image-20191225000513934"></p>
+<p>先算下三角，再算上三角</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] multiply(<span class="keyword">int</span>[] A) &#123;</span><br><span class="line">        <span class="keyword">int</span> len = A.length;</span><br><span class="line">        <span class="keyword">int</span>[] B = <span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">        B[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">            B[i] = B[i - <span class="number">1</span>] * A[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = len - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            B[i] *= temp;</span><br><span class="line">            temp *= A[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> B;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">match</span><span class="params">(<span class="keyword">char</span>[] str, <span class="keyword">char</span>[] pattern)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str == <span class="keyword">null</span> || pattern == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Pattern p = Pattern.compile(String.valueOf(pattern));</span><br><span class="line">        Matcher matcher = p.matcher(String.valueOf(str));</span><br><span class="line">        <span class="keyword">return</span> matcher.matches();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="表示数值的字符串"><a href="#表示数值的字符串" class="headerlink" title="表示数值的字符串"></a>表示数值的字符串</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNumeric</span><span class="params">(<span class="keyword">char</span>[] str)</span> </span>&#123;</span><br><span class="line">        String s = String.valueOf(str);</span><br><span class="line">        <span class="keyword">return</span> s.matches(<span class="string">"[\\+\\-]?\\d*(\\.\\d+)?([eE][\\+\\-]?\\d+)?"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="字符流中第一个不重复的字符"><a href="#字符流中第一个不重复的字符" class="headerlink" title="字符流中第一个不重复的字符"></a>字符流中第一个不重复的字符</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Map&lt;Character,Integer&gt; map = <span class="keyword">new</span> LinkedHashMap&lt;&gt;();</span><br><span class="line">    <span class="comment">//Insert one char from stringstream</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">char</span> ch)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(map.containsKey(ch))&#123;</span><br><span class="line">            <span class="keyword">int</span> temp = map.get(ch) + <span class="number">1</span>;</span><br><span class="line">            map.put(ch,temp);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            map.put(ch, <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//return the first appearence once char in current stringstream</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">FirstAppearingOnce</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(Map.Entry&lt;Character,Integer&gt; entry:map.entrySet())&#123;</span><br><span class="line">            <span class="keyword">if</span>(entry.getValue()==<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> entry.getKey();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'#'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="链表中环的入口结点"><a href="#链表中环的入口结点" class="headerlink" title="链表中环的入口结点"></a>链表中环的入口结点</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">EntryNodeOfLoop</span><span class="params">(ListNode pHead)</span> </span>&#123;</span><br><span class="line">        Set&lt;ListNode&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        ListNode p1 = pHead;</span><br><span class="line">        <span class="keyword">while</span> (p1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (set.contains(p1)) &#123;</span><br><span class="line">                <span class="keyword">return</span> p1;</span><br><span class="line">            &#125;</span><br><span class="line">            set.add(p1);</span><br><span class="line">            p1 = p1.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="删除链表中重复的结点"><a href="#删除链表中重复的结点" class="headerlink" title="删除链表中重复的结点"></a>删除链表中重复的结点</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplication</span><span class="params">(ListNode pHead)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 哨兵结点</span></span><br><span class="line">        ListNode guard = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        guard.next = pHead;</span><br><span class="line">        ListNode p1 = pHead;</span><br><span class="line">        ListNode p2 = guard;</span><br><span class="line">        <span class="keyword">while</span> (p1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (p1.next != <span class="keyword">null</span> &amp;&amp; p1.next.val == p1.val) &#123;</span><br><span class="line">                <span class="keyword">while</span> (p1.next != <span class="keyword">null</span> &amp;&amp; p1.next.val == p1.val) &#123;</span><br><span class="line">                    p1 = p1.next;</span><br><span class="line">                &#125;</span><br><span class="line">                p1 = p1.next;</span><br><span class="line">                p2.next = p1;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                p1 = p1.next;</span><br><span class="line">                p2 = p2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> guard.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="二叉树的下一个结点"><a href="#二叉树的下一个结点" class="headerlink" title="二叉树的下一个结点"></a>二叉树的下一个结点</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeLinkNode <span class="title">GetNext</span><span class="params">(TreeLinkNode pNode)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pNode == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 中序遍历，左根右，一个结点中序遍历顺序的下一个结点分以下几种情况：</span></span><br><span class="line"><span class="comment">         * 1、有右节点，输出右结点的最左结点</span></span><br><span class="line"><span class="comment">         * 2、无右节点，自己是父结点的左节点，输出父节点</span></span><br><span class="line"><span class="comment">         * 3、无右节点，自己是父结点的右节点，将当前结点赋值为父节点并继续第二种、第三种情况的分析</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">if</span> (pNode.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">            pNode = pNode.right;</span><br><span class="line">            <span class="keyword">while</span> (pNode.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                pNode = pNode.left;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> pNode;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (pNode.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (pNode.next.left == pNode) &#123;</span><br><span class="line">                <span class="keyword">return</span> pNode.next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            pNode = pNode.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="对称的二叉树"><a href="#对称的二叉树" class="headerlink" title="对称的二叉树"></a>对称的二叉树</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isSymmetrical</span><span class="params">(TreeNode pRoot)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pRoot == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> compareSubtree(pRoot.left, pRoot.right);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">compareSubtree</span><span class="params">(TreeNode left, TreeNode right)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (left == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> right == <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (right == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (left.val != right.val) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 递归比较，左子树的左子树与右子树的右子树 和 左子树的右子树与右子树的左子树</span></span><br><span class="line">        <span class="keyword">return</span> compareSubtree(left.left, right.right) &amp;&amp; compareSubtree(left.right, right.left);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="按之字形顺序打印二叉树"><a href="#按之字形顺序打印二叉树" class="headerlink" title="按之字形顺序打印二叉树"></a>按之字形顺序打印二叉树</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val = <span class="number">0</span>;</span><br><span class="line">    TreeNode left = <span class="keyword">null</span>;</span><br><span class="line">    TreeNode right = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TreeNode</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.val = val;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; Print(TreeNode pRoot) &#123;</span><br><span class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (pRoot == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        LinkedList&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="comment">// 分隔符</span></span><br><span class="line">        queue.add(<span class="keyword">null</span>);</span><br><span class="line">        queue.add(pRoot);</span><br><span class="line">        <span class="keyword">boolean</span> leftToRight = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (queue.size() != <span class="number">1</span>) &#123;</span><br><span class="line">            TreeNode node = queue.poll();</span><br><span class="line">            <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">                Iterator&lt;TreeNode&gt; iter = <span class="keyword">null</span>;</span><br><span class="line">                <span class="keyword">if</span> (leftToRight) &#123;</span><br><span class="line">                    iter = queue.iterator();</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    iter = queue.descendingIterator();</span><br><span class="line">                &#125;</span><br><span class="line">                leftToRight = !leftToRight;</span><br><span class="line">                <span class="keyword">while</span> (iter.hasNext()) &#123;</span><br><span class="line">                    TreeNode temp = (TreeNode) iter.next();</span><br><span class="line">                    list.add(temp.val);</span><br><span class="line">                &#125;</span><br><span class="line">                result.add(<span class="keyword">new</span> ArrayList&lt;Integer&gt;(list));</span><br><span class="line">                list.clear();</span><br><span class="line">                queue.addLast(<span class="keyword">null</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (node.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    queue.add(node.left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (node.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    queue.add(node.right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="把二叉树打印成多行"><a href="#把二叉树打印成多行" class="headerlink" title="把二叉树打印成多行"></a>把二叉树打印成多行</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/12/11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; Print(TreeNode pRoot) &#123;</span><br><span class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (pRoot == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        LinkedList&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        queue.add(<span class="keyword">null</span>);</span><br><span class="line">        queue.add(pRoot);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (queue.size() != <span class="number">1</span>) &#123;</span><br><span class="line">            TreeNode node = queue.poll();</span><br><span class="line">            <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">                Iterator&lt;TreeNode&gt; iterator = queue.iterator();</span><br><span class="line">                <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">                    list.add(iterator.next().val);</span><br><span class="line">                &#125;</span><br><span class="line">                result.add(<span class="keyword">new</span> ArrayList&lt;&gt;(list));</span><br><span class="line">                queue.add(<span class="keyword">null</span>);</span><br><span class="line">                list.clear();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (node.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    queue.add(node.left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (node.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    queue.add(node.right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="序列化二叉树"><a href="#序列化二叉树" class="headerlink" title="序列化二叉树"></a>序列化二叉树</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">Serialize</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            sb.append(<span class="string">"#,"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sb.append(root.val + <span class="string">","</span>);</span><br><span class="line">            sb.append(Serialize(root.left));</span><br><span class="line">            sb.append(Serialize(root.right));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">TreeNode <span class="title">Deserialize</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        Queue&lt;String&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        Collections.addAll(queue, str.split(<span class="string">","</span>));</span><br><span class="line">        <span class="keyword">return</span> Deserialize(queue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> TreeNode <span class="title">Deserialize</span><span class="params">(Queue&lt;String&gt; queue)</span> </span>&#123;</span><br><span class="line">        String string = queue.poll();</span><br><span class="line">        <span class="keyword">if</span> (string.equals(<span class="string">"#"</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode root = <span class="keyword">new</span> TreeNode(Integer.parseInt(string));</span><br><span class="line">        root.left = Deserialize(queue);</span><br><span class="line">        root.right = Deserialize(queue);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="二叉搜索树的第k个结点"><a href="#二叉搜索树的第k个结点" class="headerlink" title="二叉搜索树的第k个结点"></a>二叉搜索树的第k个结点</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">    TreeNode target = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">TreeNode <span class="title">KthNode</span><span class="params">(TreeNode pRoot, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        index = k;</span><br><span class="line">        inorderTraversal(pRoot);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root != <span class="keyword">null</span>) &#123;</span><br><span class="line">            inorderTraversal(root.left);</span><br><span class="line">            <span class="keyword">if</span> (--index == <span class="number">0</span>) &#123;</span><br><span class="line">                target = root;</span><br><span class="line">            &#125;</span><br><span class="line">            inorderTraversal(root.right);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="数据流中的中位数"><a href="#数据流中的中位数" class="headerlink" title="数据流中的中位数"></a>数据流中的中位数</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> PriorityQueue&lt;Integer&gt; minHeap = <span class="keyword">new</span> PriorityQueue&lt;&gt;();</span><br><span class="line">    <span class="keyword">private</span> PriorityQueue&lt;Integer&gt; maxHeap = <span class="keyword">new</span> PriorityQueue&lt;&gt;(<span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> o2 - o1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Insert</span><span class="params">(Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (count % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            maxHeap.add(num);</span><br><span class="line">            <span class="keyword">int</span> temp = maxHeap.poll();</span><br><span class="line">            minHeap.add(temp);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            minHeap.add(num);</span><br><span class="line">            <span class="keyword">int</span> temp = minHeap.poll();</span><br><span class="line">            maxHeap.add(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Double <span class="title">GetMedian</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (count % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> (minHeap.peek() + maxHeap.peek()) / <span class="number">2.0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> minHeap.peek().doubleValue();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="滑动窗口的最大值"><a href="#滑动窗口的最大值" class="headerlink" title="滑动窗口的最大值"></a>滑动窗口的最大值</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">maxInWindows</span><span class="params">(<span class="keyword">int</span>[] num, <span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        LinkedList&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (num == <span class="keyword">null</span> || num.length == <span class="number">0</span> || size == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> start;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num.length; i++) &#123;</span><br><span class="line">            start = i - size + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(queue.isEmpty())&#123;</span><br><span class="line">                queue.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(start &gt; queue.peekFirst())&#123;</span><br><span class="line">                queue.pollFirst();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>((!queue.isEmpty()) &amp;&amp; num[queue.peekLast()] &lt;= num[i])&#123;</span><br><span class="line">                queue.pollLast();</span><br><span class="line">            &#125;</span><br><span class="line">            queue.add(i);</span><br><span class="line">            <span class="keyword">if</span>(start &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">                result.add(num[queue.peekFirst()]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="矩阵中的路径"><a href="#矩阵中的路径" class="headerlink" title="矩阵中的路径"></a>矩阵中的路径</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span>[] flag;</span><br><span class="line">    <span class="keyword">char</span>[] matrix;</span><br><span class="line">    <span class="keyword">char</span>[] str;</span><br><span class="line">    <span class="keyword">int</span> rows;</span><br><span class="line">    <span class="keyword">int</span> cols;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPath</span><span class="params">(<span class="keyword">char</span>[] matrix, <span class="keyword">int</span> rows, <span class="keyword">int</span> cols, <span class="keyword">char</span>[] str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.matrix = matrix;</span><br><span class="line">        flag = <span class="keyword">new</span> <span class="keyword">boolean</span>[matrix.length];</span><br><span class="line">        <span class="keyword">this</span>.str = str;</span><br><span class="line">        <span class="keyword">this</span>.rows = rows;</span><br><span class="line">        <span class="keyword">this</span>.cols = cols;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (judge(i, j, <span class="number">0</span>)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> index = i * cols + j;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">0</span> || j &lt; <span class="number">0</span> || i &gt;= rows || j &gt;= cols || matrix[index] != str[k] || flag[index]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (k == str.length - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        flag[index] = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (judge(i - <span class="number">1</span>, j, k + <span class="number">1</span>) ||</span><br><span class="line">                judge(i + <span class="number">1</span>, j, k + <span class="number">1</span>) ||</span><br><span class="line">                judge(i, j - <span class="number">1</span>, k + <span class="number">1</span>) ||</span><br><span class="line">                judge(i, j + <span class="number">1</span>, k + <span class="number">1</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        flag[index] = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="机器人的运动范围"><a href="#机器人的运动范围" class="headerlink" title="机器人的运动范围"></a>机器人的运动范围</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> threshold, rows, cols;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span>[][] visited;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">movingCount</span><span class="params">(<span class="keyword">int</span> threshold, <span class="keyword">int</span> rows, <span class="keyword">int</span> cols)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.threshold = threshold;</span><br><span class="line">        <span class="keyword">this</span>.rows = rows;</span><br><span class="line">        <span class="keyword">this</span>.cols = cols;</span><br><span class="line">        visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[rows][cols];</span><br><span class="line">        checkVisit(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (visited[i][j]) &#123;</span><br><span class="line">                    result += <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">checkVisit</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">0</span> || j &lt; <span class="number">0</span> || i &gt;= rows || j &gt;= cols || visited[i][j]) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (digitSum(i) + digitSum(j) &lt;= threshold) &#123;</span><br><span class="line">            visited[i][j] = <span class="keyword">true</span>;</span><br><span class="line">            checkVisit(i - <span class="number">1</span>, j);</span><br><span class="line">            checkVisit(i + <span class="number">1</span>, j);</span><br><span class="line">            checkVisit(i, j - <span class="number">1</span>);</span><br><span class="line">            checkVisit(i, j + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">digitSum</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (num != <span class="number">0</span>) &#123;</span><br><span class="line">            sum += num % <span class="number">10</span>;</span><br><span class="line">            num /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="剪绳子"><a href="#剪绳子" class="headerlink" title="剪绳子"></a>剪绳子</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">cutRope</span><span class="params">(<span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (target == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (target == <span class="number">3</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[target + <span class="number">1</span>];</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        dp[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">        dp[<span class="number">3</span>] = <span class="number">3</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">4</span>; i &lt;= target; i++) &#123;</span><br><span class="line">            dp[i] = Math.max(dp[i - <span class="number">2</span>] * <span class="number">2</span>, dp[i - <span class="number">3</span>] * <span class="number">3</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[target];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>剑指offer</category>
+      </categories>
+  </entry>
+  <entry>
     <title>剑指offer上</title>
-    <url>/2019/12/24/%E5%89%91%E6%8C%87offer%E4%B8%8A/</url>
+    <url>/posts/9bc0fa57/</url>
     <content><![CDATA[<p>前言：剑指offer上</p>
 <a id="more"></a>
 
@@ -3550,151 +3693,8 @@
       </categories>
   </entry>
   <entry>
-    <title>剑指offer下</title>
-    <url>/2019/12/24/%E5%89%91%E6%8C%87offer%E4%B8%8B/</url>
-    <content><![CDATA[<p>前言：剑指offer下</p>
-<a id="more"></a>
-
-<h4 id="数字在排序数组中出现的次数"><a href="#数字在排序数组中出现的次数" class="headerlink" title="数字在排序数组中出现的次数"></a>数字在排序数组中出现的次数</h4><p>二分查找</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">GetNumberOfK</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = array.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> leftK, rightK;</span><br><span class="line">        <span class="comment">// 查找</span></span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (array[mid] == k) &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[mid] &lt; k) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        leftK = left;</span><br><span class="line">        right = array.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (array[mid] == k) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[mid] &lt; k) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        rightK = right;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> rightK - leftK + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="二叉树的深度"><a href="#二叉树的深度" class="headerlink" title="二叉树的深度"></a>二叉树的深度</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">TreeDepth</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> left = TreeDepth(root.left);</span><br><span class="line">        <span class="keyword">int</span> right = TreeDepth(root.right);</span><br><span class="line">        <span class="keyword">return</span> left &gt; right ? left + <span class="number">1</span> : right + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h4><p>判断左右节点深度是否相差1</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> balance = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">IsBalanced_Solution</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        getDepth(root);</span><br><span class="line">        <span class="keyword">return</span> balance;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getDepth</span><span class="params">(TreeNode node)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> leftDepth = getDepth(node.left);</span><br><span class="line">        <span class="keyword">int</span> rightDepth = getDepth(node.right);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (Math.abs(leftDepth - rightDepth) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">            balance = <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> leftDepth &gt; rightDepth ? leftDepth + <span class="number">1</span> : rightDepth + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="数组中只出现一次的数字"><a href="#数组中只出现一次的数字" class="headerlink" title="数组中只出现一次的数字"></a>数组中只出现一次的数字</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">FindNumsAppearOnce</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> num1[], <span class="keyword">int</span> num2[])</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : array) &#123;</span><br><span class="line">            <span class="keyword">if</span> (set.contains(i)) &#123;</span><br><span class="line">                set.remove(i);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                set.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Iterator&lt;Integer&gt; iterator = set.iterator();</span><br><span class="line">        num1[<span class="number">0</span>] = iterator.next();</span><br><span class="line">        num2[<span class="number">0</span>] = iterator.next();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="和为S的连续正数序列"><a href="#和为S的连续正数序列" class="headerlink" title="和为S的连续正数序列"></a>和为S的连续正数序列</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&gt;&lt;Integer&gt;&gt; FindContinuousSequence(<span class="keyword">int</span> sum) &#123;</span><br><span class="line">        ArrayList&lt;ArrayList&gt;&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;ArrayList&gt;&lt;Integer&gt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">1</span>, right = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">            <span class="keyword">int</span> currentSum = (left + right) * (right - left + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (currentSum == sum) &#123;</span><br><span class="line">                ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = left; i &lt;= right; i++) &#123;</span><br><span class="line">                    list.add(i);</span><br><span class="line">                &#125;</span><br><span class="line">                result.add(list);</span><br><span class="line">                right++;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (currentSum &lt; sum) &#123;</span><br><span class="line">                right++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="和为S的两个数字"><a href="#和为S的两个数字" class="headerlink" title="和为S的两个数字"></a>和为S的两个数字</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">FindNumbersWithSum</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">    ArrayList&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = array.length - <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">        <span class="keyword">if</span> (array[left] + array[right] == sum) &#123;</span><br><span class="line">            result.add(array[left]);</span><br><span class="line">            result.add(array[right]);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[left] + array[right] &lt; sum) &#123;</span><br><span class="line">            left++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            right--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="左旋转字符串"><a href="#左旋转字符串" class="headerlink" title="左旋转字符串"></a>左旋转字符串</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">LeftRotateString</span><span class="params">(String str, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str.length() &lt; n) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> str.substring(n) + str.substring(<span class="number">0</span>, n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="翻转单词顺序列"><a href="#翻转单词顺序列" class="headerlink" title="翻转单词顺序列"></a>翻转单词顺序列</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">ReverseSentence</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str.trim().equals(<span class="string">""</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> str;</span><br><span class="line">        &#125;</span><br><span class="line">        String s[] = str.split(<span class="string">" "</span>);</span><br><span class="line">        StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = s.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            stringBuilder.append(s[i]);</span><br><span class="line">            stringBuilder.append(<span class="string">" "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stringBuilder.toString().trim();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="扑克牌顺子"><a href="#扑克牌顺子" class="headerlink" title="扑克牌顺子"></a>扑克牌顺子</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isContinuous</span><span class="params">(<span class="keyword">int</span>[] numbers)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (numbers == <span class="keyword">null</span> || numbers.length &lt; <span class="number">5</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> max = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> min = <span class="number">14</span>;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : numbers) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (set.contains(i)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    set.add(i);</span><br><span class="line">                    <span class="keyword">if</span> (i &lt; min) &#123;</span><br><span class="line">                        min = i;</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span> (i &gt; max) &#123;</span><br><span class="line">                        max = i;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (max - min) &lt; <span class="number">5</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="孩子们的游戏-圆圈中最后剩下的数"><a href="#孩子们的游戏-圆圈中最后剩下的数" class="headerlink" title="孩子们的游戏(圆圈中最后剩下的数)"></a>孩子们的游戏(圆圈中最后剩下的数)</h4><p>模拟约瑟夫环</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        <span class="keyword">int</span> i = -<span class="number">1</span>, step = m, count = n;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="keyword">if</span> (i &gt;= n) &#123;</span><br><span class="line">                i = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (array[i] == <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (--step == <span class="number">0</span>) &#123;</span><br><span class="line">                array[i] = <span class="number">1</span>;</span><br><span class="line">                step = m;</span><br><span class="line">                count--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 返回最后一个出局的人位置</span></span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>数学公式：f(n,k)=(f(n-1,k)+k)%n</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">LastRemaining_Solution</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (LastRemaining_Solution(n - <span class="number">1</span>, m) + m) % n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="求1-2-3-…-n"><a href="#求1-2-3-…-n" class="headerlink" title="求1+2+3+…+n"></a>求1+2+3+…+n</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Sum_Solution</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = (<span class="keyword">int</span>) (Math.pow(n, <span class="number">2</span>) + n);</span><br><span class="line">        <span class="keyword">return</span> sum &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="不用加减乘除做加法"><a href="#不用加减乘除做加法" class="headerlink" title="不用加减乘除做加法"></a>不用加减乘除做加法</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Add</span><span class="params">(<span class="keyword">int</span> num1, <span class="keyword">int</span> num2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Integer.sum(num1, num2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="把字符串转换成整数"><a href="#把字符串转换成整数" class="headerlink" title="把字符串转换成整数"></a>把字符串转换成整数</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">StrToInt</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str.equals(<span class="string">""</span>) || str.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">char</span>[] arr = str.toCharArray();</span><br><span class="line">        <span class="keyword">boolean</span> negative = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (arr[<span class="number">0</span>] == <span class="string">'-'</span>) &#123;</span><br><span class="line">            negative = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i = (arr[<span class="number">0</span>] == <span class="string">'-'</span> || arr[<span class="number">0</span>] == <span class="string">'+'</span>) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; arr.length) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[i] &lt; <span class="number">48</span> || arr[i] &gt; <span class="number">57</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            sum = sum * <span class="number">10</span> + arr[i] - <span class="number">48</span>;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        sum = negative ? sum * -<span class="number">1</span> : sum;</span><br><span class="line">        <span class="keyword">if</span> (sum &gt; Integer.MAX_VALUE || sum &lt; Integer.MIN_VALUE) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="数组中重复的数字"><a href="#数组中重复的数字" class="headerlink" title="数组中重复的数字"></a>数组中重复的数字</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> numbers[], <span class="keyword">int</span> length, <span class="keyword">int</span>[] duplication)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> HashSet&lt;Integer&gt;();</span><br><span class="line">        duplication[<span class="number">0</span>] = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (numbers == <span class="keyword">null</span> || length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : numbers) &#123;</span><br><span class="line">            <span class="keyword">if</span> (set.contains(i)) &#123;</span><br><span class="line">                duplication[<span class="number">0</span>] = i;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            set.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="构建乘积数组"><a href="#构建乘积数组" class="headerlink" title="构建乘积数组"></a>构建乘积数组</h4><p><img src="/images/%E5%89%91%E6%8C%87offer%E4%B8%8B/image-20191225000513934.png" alt="image-20191225000513934"></p>
-<p>先算下三角，再算上三角</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] multiply(<span class="keyword">int</span>[] A) &#123;</span><br><span class="line">        <span class="keyword">int</span> len = A.length;</span><br><span class="line">        <span class="keyword">int</span>[] B = <span class="keyword">new</span> <span class="keyword">int</span>[len];</span><br><span class="line">        B[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">            B[i] = B[i - <span class="number">1</span>] * A[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> temp = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = len - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            B[i] *= temp;</span><br><span class="line">            temp *= A[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> B;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">match</span><span class="params">(<span class="keyword">char</span>[] str, <span class="keyword">char</span>[] pattern)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (str == <span class="keyword">null</span> || pattern == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Pattern p = Pattern.compile(String.valueOf(pattern));</span><br><span class="line">        Matcher matcher = p.matcher(String.valueOf(str));</span><br><span class="line">        <span class="keyword">return</span> matcher.matches();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="表示数值的字符串"><a href="#表示数值的字符串" class="headerlink" title="表示数值的字符串"></a>表示数值的字符串</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNumeric</span><span class="params">(<span class="keyword">char</span>[] str)</span> </span>&#123;</span><br><span class="line">        String s = String.valueOf(str);</span><br><span class="line">        <span class="keyword">return</span> s.matches(<span class="string">"[\\+\\-]?\\d*(\\.\\d+)?([eE][\\+\\-]?\\d+)?"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="字符流中第一个不重复的字符"><a href="#字符流中第一个不重复的字符" class="headerlink" title="字符流中第一个不重复的字符"></a>字符流中第一个不重复的字符</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Map&lt;Character,Integer&gt; map = <span class="keyword">new</span> LinkedHashMap&lt;&gt;();</span><br><span class="line">    <span class="comment">//Insert one char from stringstream</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Insert</span><span class="params">(<span class="keyword">char</span> ch)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(map.containsKey(ch))&#123;</span><br><span class="line">            <span class="keyword">int</span> temp = map.get(ch) + <span class="number">1</span>;</span><br><span class="line">            map.put(ch,temp);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            map.put(ch, <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//return the first appearence once char in current stringstream</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">char</span> <span class="title">FirstAppearingOnce</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(Map.Entry&lt;Character,Integer&gt; entry:map.entrySet())&#123;</span><br><span class="line">            <span class="keyword">if</span>(entry.getValue()==<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> entry.getKey();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'#'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="链表中环的入口结点"><a href="#链表中环的入口结点" class="headerlink" title="链表中环的入口结点"></a>链表中环的入口结点</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">EntryNodeOfLoop</span><span class="params">(ListNode pHead)</span> </span>&#123;</span><br><span class="line">        Set&lt;ListNode&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        ListNode p1 = pHead;</span><br><span class="line">        <span class="keyword">while</span> (p1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (set.contains(p1)) &#123;</span><br><span class="line">                <span class="keyword">return</span> p1;</span><br><span class="line">            &#125;</span><br><span class="line">            set.add(p1);</span><br><span class="line">            p1 = p1.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="删除链表中重复的结点"><a href="#删除链表中重复的结点" class="headerlink" title="删除链表中重复的结点"></a>删除链表中重复的结点</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplication</span><span class="params">(ListNode pHead)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 哨兵结点</span></span><br><span class="line">        ListNode guard = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        guard.next = pHead;</span><br><span class="line">        ListNode p1 = pHead;</span><br><span class="line">        ListNode p2 = guard;</span><br><span class="line">        <span class="keyword">while</span> (p1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (p1.next != <span class="keyword">null</span> &amp;&amp; p1.next.val == p1.val) &#123;</span><br><span class="line">                <span class="keyword">while</span> (p1.next != <span class="keyword">null</span> &amp;&amp; p1.next.val == p1.val) &#123;</span><br><span class="line">                    p1 = p1.next;</span><br><span class="line">                &#125;</span><br><span class="line">                p1 = p1.next;</span><br><span class="line">                p2.next = p1;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                p1 = p1.next;</span><br><span class="line">                p2 = p2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> guard.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="二叉树的下一个结点"><a href="#二叉树的下一个结点" class="headerlink" title="二叉树的下一个结点"></a>二叉树的下一个结点</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeLinkNode <span class="title">GetNext</span><span class="params">(TreeLinkNode pNode)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pNode == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 中序遍历，左根右，一个结点中序遍历顺序的下一个结点分以下几种情况：</span></span><br><span class="line"><span class="comment">         * 1、有右节点，输出右结点的最左结点</span></span><br><span class="line"><span class="comment">         * 2、无右节点，自己是父结点的左节点，输出父节点</span></span><br><span class="line"><span class="comment">         * 3、无右节点，自己是父结点的右节点，将当前结点赋值为父节点并继续第二种、第三种情况的分析</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">if</span> (pNode.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">            pNode = pNode.right;</span><br><span class="line">            <span class="keyword">while</span> (pNode.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                pNode = pNode.left;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> pNode;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (pNode.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (pNode.next.left == pNode) &#123;</span><br><span class="line">                <span class="keyword">return</span> pNode.next;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            pNode = pNode.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="对称的二叉树"><a href="#对称的二叉树" class="headerlink" title="对称的二叉树"></a>对称的二叉树</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isSymmetrical</span><span class="params">(TreeNode pRoot)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (pRoot == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> compareSubtree(pRoot.left, pRoot.right);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">compareSubtree</span><span class="params">(TreeNode left, TreeNode right)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (left == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> right == <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (right == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (left.val != right.val) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 递归比较，左子树的左子树与右子树的右子树 和 左子树的右子树与右子树的左子树</span></span><br><span class="line">        <span class="keyword">return</span> compareSubtree(left.left, right.right) &amp;&amp; compareSubtree(left.right, right.left);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="按之字形顺序打印二叉树"><a href="#按之字形顺序打印二叉树" class="headerlink" title="按之字形顺序打印二叉树"></a>按之字形顺序打印二叉树</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/11/26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val = <span class="number">0</span>;</span><br><span class="line">    TreeNode left = <span class="keyword">null</span>;</span><br><span class="line">    TreeNode right = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TreeNode</span><span class="params">(<span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.val = val;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; Print(TreeNode pRoot) &#123;</span><br><span class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (pRoot == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        LinkedList&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="comment">// 分隔符</span></span><br><span class="line">        queue.add(<span class="keyword">null</span>);</span><br><span class="line">        queue.add(pRoot);</span><br><span class="line">        <span class="keyword">boolean</span> leftToRight = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (queue.size() != <span class="number">1</span>) &#123;</span><br><span class="line">            TreeNode node = queue.poll();</span><br><span class="line">            <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">                Iterator&lt;TreeNode&gt; iter = <span class="keyword">null</span>;</span><br><span class="line">                <span class="keyword">if</span> (leftToRight) &#123;</span><br><span class="line">                    iter = queue.iterator();</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    iter = queue.descendingIterator();</span><br><span class="line">                &#125;</span><br><span class="line">                leftToRight = !leftToRight;</span><br><span class="line">                <span class="keyword">while</span> (iter.hasNext()) &#123;</span><br><span class="line">                    TreeNode temp = (TreeNode) iter.next();</span><br><span class="line">                    list.add(temp.val);</span><br><span class="line">                &#125;</span><br><span class="line">                result.add(<span class="keyword">new</span> ArrayList&lt;Integer&gt;(list));</span><br><span class="line">                list.clear();</span><br><span class="line">                queue.addLast(<span class="keyword">null</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (node.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    queue.add(node.left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (node.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    queue.add(node.right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="把二叉树打印成多行"><a href="#把二叉树打印成多行" class="headerlink" title="把二叉树打印成多行"></a>把二叉树打印成多行</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> shency</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span>: TODO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span>: 2019/12/11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; Print(TreeNode pRoot) &#123;</span><br><span class="line">        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (pRoot == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        LinkedList&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        queue.add(<span class="keyword">null</span>);</span><br><span class="line">        queue.add(pRoot);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (queue.size() != <span class="number">1</span>) &#123;</span><br><span class="line">            TreeNode node = queue.poll();</span><br><span class="line">            <span class="keyword">if</span> (node == <span class="keyword">null</span>) &#123;</span><br><span class="line">                Iterator&lt;TreeNode&gt; iterator = queue.iterator();</span><br><span class="line">                <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">                    list.add(iterator.next().val);</span><br><span class="line">                &#125;</span><br><span class="line">                result.add(<span class="keyword">new</span> ArrayList&lt;&gt;(list));</span><br><span class="line">                queue.add(<span class="keyword">null</span>);</span><br><span class="line">                list.clear();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (node.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    queue.add(node.left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (node.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    queue.add(node.right);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="序列化二叉树"><a href="#序列化二叉树" class="headerlink" title="序列化二叉树"></a>序列化二叉树</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">Serialize</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            sb.append(<span class="string">"#,"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sb.append(root.val + <span class="string">","</span>);</span><br><span class="line">            sb.append(Serialize(root.left));</span><br><span class="line">            sb.append(Serialize(root.right));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">TreeNode <span class="title">Deserialize</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        Queue&lt;String&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        Collections.addAll(queue, str.split(<span class="string">","</span>));</span><br><span class="line">        <span class="keyword">return</span> Deserialize(queue);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> TreeNode <span class="title">Deserialize</span><span class="params">(Queue&lt;String&gt; queue)</span> </span>&#123;</span><br><span class="line">        String string = queue.poll();</span><br><span class="line">        <span class="keyword">if</span> (string.equals(<span class="string">"#"</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode root = <span class="keyword">new</span> TreeNode(Integer.parseInt(string));</span><br><span class="line">        root.left = Deserialize(queue);</span><br><span class="line">        root.right = Deserialize(queue);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="二叉搜索树的第k个结点"><a href="#二叉搜索树的第k个结点" class="headerlink" title="二叉搜索树的第k个结点"></a>二叉搜索树的第k个结点</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">    TreeNode target = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">TreeNode <span class="title">KthNode</span><span class="params">(TreeNode pRoot, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        index = k;</span><br><span class="line">        inorderTraversal(pRoot);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">inorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root != <span class="keyword">null</span>) &#123;</span><br><span class="line">            inorderTraversal(root.left);</span><br><span class="line">            <span class="keyword">if</span> (--index == <span class="number">0</span>) &#123;</span><br><span class="line">                target = root;</span><br><span class="line">            &#125;</span><br><span class="line">            inorderTraversal(root.right);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="数据流中的中位数"><a href="#数据流中的中位数" class="headerlink" title="数据流中的中位数"></a>数据流中的中位数</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> PriorityQueue&lt;Integer&gt; minHeap = <span class="keyword">new</span> PriorityQueue&lt;&gt;();</span><br><span class="line">    <span class="keyword">private</span> PriorityQueue&lt;Integer&gt; maxHeap = <span class="keyword">new</span> PriorityQueue&lt;&gt;(<span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> o2 - o1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Insert</span><span class="params">(Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (count % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            maxHeap.add(num);</span><br><span class="line">            <span class="keyword">int</span> temp = maxHeap.poll();</span><br><span class="line">            minHeap.add(temp);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            minHeap.add(num);</span><br><span class="line">            <span class="keyword">int</span> temp = minHeap.poll();</span><br><span class="line">            maxHeap.add(temp);</span><br><span class="line">        &#125;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Double <span class="title">GetMedian</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (count % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> (minHeap.peek() + maxHeap.peek()) / <span class="number">2.0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> minHeap.peek().doubleValue();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="滑动窗口的最大值"><a href="#滑动窗口的最大值" class="headerlink" title="滑动窗口的最大值"></a>滑动窗口的最大值</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">maxInWindows</span><span class="params">(<span class="keyword">int</span>[] num, <span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        LinkedList&lt;Integer&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (num == <span class="keyword">null</span> || num.length == <span class="number">0</span> || size == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> result;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> start;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; num.length; i++) &#123;</span><br><span class="line">            start = i - size + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(queue.isEmpty())&#123;</span><br><span class="line">                queue.add(i);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(start &gt; queue.peekFirst())&#123;</span><br><span class="line">                queue.pollFirst();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>((!queue.isEmpty()) &amp;&amp; num[queue.peekLast()] &lt;= num[i])&#123;</span><br><span class="line">                queue.pollLast();</span><br><span class="line">            &#125;</span><br><span class="line">            queue.add(i);</span><br><span class="line">            <span class="keyword">if</span>(start &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">                result.add(num[queue.peekFirst()]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="矩阵中的路径"><a href="#矩阵中的路径" class="headerlink" title="矩阵中的路径"></a>矩阵中的路径</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span>[] flag;</span><br><span class="line">    <span class="keyword">char</span>[] matrix;</span><br><span class="line">    <span class="keyword">char</span>[] str;</span><br><span class="line">    <span class="keyword">int</span> rows;</span><br><span class="line">    <span class="keyword">int</span> cols;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPath</span><span class="params">(<span class="keyword">char</span>[] matrix, <span class="keyword">int</span> rows, <span class="keyword">int</span> cols, <span class="keyword">char</span>[] str)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.matrix = matrix;</span><br><span class="line">        flag = <span class="keyword">new</span> <span class="keyword">boolean</span>[matrix.length];</span><br><span class="line">        <span class="keyword">this</span>.str = str;</span><br><span class="line">        <span class="keyword">this</span>.rows = rows;</span><br><span class="line">        <span class="keyword">this</span>.cols = cols;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (judge(i, j, <span class="number">0</span>)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">judge</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> index = i * cols + j;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">0</span> || j &lt; <span class="number">0</span> || i &gt;= rows || j &gt;= cols || matrix[index] != str[k] || flag[index]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (k == str.length - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        flag[index] = <span class="keyword">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (judge(i - <span class="number">1</span>, j, k + <span class="number">1</span>) ||</span><br><span class="line">                judge(i + <span class="number">1</span>, j, k + <span class="number">1</span>) ||</span><br><span class="line">                judge(i, j - <span class="number">1</span>, k + <span class="number">1</span>) ||</span><br><span class="line">                judge(i, j + <span class="number">1</span>, k + <span class="number">1</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        flag[index] = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="机器人的运动范围"><a href="#机器人的运动范围" class="headerlink" title="机器人的运动范围"></a>机器人的运动范围</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> threshold, rows, cols;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span>[][] visited;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">movingCount</span><span class="params">(<span class="keyword">int</span> threshold, <span class="keyword">int</span> rows, <span class="keyword">int</span> cols)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.threshold = threshold;</span><br><span class="line">        <span class="keyword">this</span>.rows = rows;</span><br><span class="line">        <span class="keyword">this</span>.cols = cols;</span><br><span class="line">        visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[rows][cols];</span><br><span class="line">        checkVisit(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (visited[i][j]) &#123;</span><br><span class="line">                    result += <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">checkVisit</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">0</span> || j &lt; <span class="number">0</span> || i &gt;= rows || j &gt;= cols || visited[i][j]) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (digitSum(i) + digitSum(j) &lt;= threshold) &#123;</span><br><span class="line">            visited[i][j] = <span class="keyword">true</span>;</span><br><span class="line">            checkVisit(i - <span class="number">1</span>, j);</span><br><span class="line">            checkVisit(i + <span class="number">1</span>, j);</span><br><span class="line">            checkVisit(i, j - <span class="number">1</span>);</span><br><span class="line">            checkVisit(i, j + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">digitSum</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (num != <span class="number">0</span>) &#123;</span><br><span class="line">            sum += num % <span class="number">10</span>;</span><br><span class="line">            num /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="剪绳子"><a href="#剪绳子" class="headerlink" title="剪绳子"></a>剪绳子</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">cutRope</span><span class="params">(<span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (target == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (target == <span class="number">3</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[target + <span class="number">1</span>];</span><br><span class="line">        dp[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        dp[<span class="number">2</span>] = <span class="number">2</span>;</span><br><span class="line">        dp[<span class="number">3</span>] = <span class="number">3</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">4</span>; i &lt;= target; i++) &#123;</span><br><span class="line">            dp[i] = Math.max(dp[i - <span class="number">2</span>] * <span class="number">2</span>, dp[i - <span class="number">3</span>] * <span class="number">3</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[target];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>剑指offer</category>
-      </categories>
-  </entry>
-  <entry>
     <title>ArrayList源码学习</title>
-    <url>/2019/12/24/ArrayList%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</url>
+    <url>/posts/95d9f91e/</url>
     <content><![CDATA[<p>前言：ArrayList源码学习</p>
 <a id="more"></a>
 
@@ -3874,7 +3874,7 @@
   </entry>
   <entry>
     <title>List排序</title>
-    <url>/2019/12/23/List%E6%8E%92%E5%BA%8F/</url>
+    <url>/posts/b8b2cf67/</url>
     <content><![CDATA[<p>前言：List排序</p>
 <a id="more"></a>
 
