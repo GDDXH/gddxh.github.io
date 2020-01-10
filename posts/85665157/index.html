@@ -45,17 +45,17 @@
   };
 </script>
 
-  <meta name="description" content="前言：总结一下各种SQL语句加锁分析">
+  <meta name="description" content="前言：java Object的wait与notify方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="innodb中各种SQL语句加锁分析">
-<meta property="og:url" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;posts&#x2F;e593a295&#x2F;index.html">
+<meta property="og:title" content="wait与notify">
+<meta property="og:url" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;posts&#x2F;85665157&#x2F;index.html">
 <meta property="og:site_name" content="Husky">
-<meta property="og:description" content="前言：总结一下各种SQL语句加锁分析">
+<meta property="og:description" content="前言：java Object的wait与notify方法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-06T15:58:40.297Z">
+<meta property="og:updated_time" content="2020-01-10T15:51:24.560Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://gddxh.github.io/posts/e593a295/">
+<link rel="canonical" href="https://gddxh.github.io/posts/85665157/">
 
 
 <script id="page-configurations">
@@ -69,7 +69,7 @@
   };
 </script>
 
-  <title>innodb中各种SQL语句加锁分析 | Husky</title>
+  <title>wait与notify | Husky</title>
   
 
 
@@ -200,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gddxh.github.io/posts/e593a295/">
+    <link itemprop="mainEntityOfPage" href="https://gddxh.github.io/posts/85665157/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -213,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          innodb中各种SQL语句加锁分析
+          wait与notify
         </h1>
 
         <div class="post-meta">
@@ -222,24 +222,18 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-01-01 21:48:22" itemprop="dateCreated datePublished" datetime="2020-01-01T21:48:22+08:00">2020-01-01</time>
+              <time title="创建时间：2020-01-10 23:47:18 / 修改时间：23:51:24" itemprop="dateCreated datePublished" datetime="2020-01-10T23:47:18+08:00">2020-01-10</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-06 23:58:40" itemprop="dateModified" datetime="2020-01-06T23:58:40+08:00">2020-01-06</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
+                  <a href="/categories/java%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
+                    <span itemprop="name">java基础</span>
                   </a>
                 </span>
             </span>
@@ -257,14 +251,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.2k</span>
+              <span>1.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -276,36 +270,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>前言：总结一下各种SQL语句加锁分析</p>
+        <p>前言：java Object的wait与notify方法</p>
 <a id="more"></a>
 
-<h4 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h4><p><strong>SELECT … FROM</strong> </p>
-<p>SELECT … FROM 是一个快照读，通过读取数据库的一个快照，不会加任何锁，除非将隔离级别设置成了 SERIALIZABLE 。在 SERIALIZABLE 隔离级别下，如果索引是非唯一索引，那么将在相应的记录上加上一个共享的next key锁。如果是唯一索引，只需要在相应记录上加index record lock</p>
-<p><strong>LOCK IN SHARE MODE</strong></p>
-<p>SELECT … FROM … LOCK IN SHARE MODE 语句在所有索引扫描范围的索引记录上加上共享的next key锁。如果是唯一索引，只需要在相应记录上加index record lock。</p>
-<p><strong>FOR UPDATE</strong></p>
-<p>SELECT … FROM … FOR UPDATE 语句在所有索引扫描范围的索引记录上加上排他的next key锁。如果是唯一索引，只需要在相应记录上加index record lock。这将堵塞其他会话利用SELECT … FROM … LOCK IN SHARE MODE 读取相同的记录，但是快照读将忽略记录上的锁。</p>
-<h4 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h4><p>UPDATE … WHERE …语句在所有索引扫描范围的索引记录上加上排他的next key锁。如果是唯一索引，只需要在相应记录上加index record lock。</p>
-<p>当UPDATE 操作修改主键记录的时候，将在相应的二级索引上加上隐式的锁。当进行重复键检测的时候，将会在插入新的二级索引记录之前，在其二级索引上加上一把共享锁。</p>
-<h4 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a>DELETE</h4><p>DELETE FROM … WHERE … 语句在所有索引扫描范围的索引记录上加上排他的next key锁。如果是唯一索引，只需要在相应记录上加index record lock。</p>
-<h4 id="INSERT"><a href="#INSERT" class="headerlink" title="INSERT"></a>INSERT</h4><p><strong>INSERT</strong> </p>
-<p>INSERT 语句将在插入的记录上加一把排他锁，这个锁是一个index-record lock，并不是next-key 锁，因此就没有gap 锁，他将不会阻止其他会话在该条记录之前的gap插入记录。</p>
-<p>在插入记录之前，将会加上一种叫做 insert intention gap 的 gap 锁。这个 insert intention gap表示他有意向在这个index gap插入记录，如果其他会话在这个index gap中插入的位置不相同，那么将不需要等待。假设存在索引记录4和7，会话A要插入记录5，会话B要插入记录6，每个会话在插入记录之前都需要锁定4和7之间gap，但是他们彼此不会互相堵塞，因为插入的位置不相同。</p>
-<p>如果出现了重复键错误，将在重复键上加一个共享锁。如果会话1插入一条记录，没有提交，他会在该记录上加上排他锁，会话2和会话3都尝试插入该重复记录，那么他们都会被堵塞，会话2和会话3将尝试在该记录上加一个共享锁。如果此时会话1回滚，将发生死锁。</p>
-<p><strong>ON DUPLICATE KEY UPDATE</strong></p>
-<p>INSERT … ON DUPLICATE KEY UPDATE 和普通的INSERT并不相同。如果碰到重复键值，INSERT … ON DUPLICATE KEY UPDATE 将在记录上加排他的 next-key锁。</p>
-<p>REPLACE 在没有碰到重复键值的时候和普通的INSERT是一样的，如果碰到重复键，将在记录上加一个排他的 next-key锁。</p>
-<p><strong>INSERT+SELECT</strong></p>
-<p>INSERT INTO T SELECT … FROM S WHERE … 语句在插入T表的每条记录上加上index record lock 。如果隔离级别是 READ COMMITTED, 或者启用了 innodb_locks_unsafe_for_binlog 且事务隔离级别不是SERIALIZABLE，那么innodb将通过快照读取表S(no locks)。否则，innodb将在S的记录上加共享的next-key锁。</p>
-<p>CREATE TABLE … SELECT … 和 INSERT INTO T SELECT … FROM S WHERE …一样，在S上加共享的next-key锁或者进行快照读取（(no locks）</p>
-<h4 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h4><p>REPLACE INTO t SELECT … FROM s WHERE … 和 UPDATE t … WHERE col IN (SELECT … FROM s …) 中的select 部分将在表s上加共享的next-key锁。</p>
-<p><strong>自增</strong></p>
-<p>当碰到有自增列的表的时候，innodb在自增列的索引最后面加上一个排他锁，叫AUTO-INC table lock 。AUTO-INC table lock会在语句执行完成后进行释放，而不是事务结束。如果AUTO-INC table lock被一个会话占有，那么其他会话将无法在该表中插入数据。innodb可以预先获取sql需要多少自增的大小，而不需要去申请锁，更多设置请参考参数innodb_autoinc_lock_mode.</p>
-<p><strong>外键约束</strong></p>
-<p>如果一张表的外键约束被启用了，任何在该表上的插入、更新、删除都将需要加共享的record-level locks来检查是否满足约束。如果约束检查失败，innodb也会加上共享的record-level locks。</p>
-<p><strong>lock tables</strong></p>
-<p>lock tables 是用来加表级锁，但是是MySQL的server层来加这把锁的。当innodb_table_locks = 1 (the default) 以及 autocommit = 0的时候，innodb能够感知表锁，同时server层了解到innodb已经加了row-level locks。否则，innodb将无法自动检测到死锁，同时server无法确定是否有行级锁，导致当其他会话占用行级锁的时候还能获得表锁。</p>
-
+<p>线程间通信的方式主要为共享内存、线程同步。</p>
+<p>线程同步除了synchronized互斥同步外，也可以使用wait/notify实现等待、通知的机制。</p>
+<p>（1）wait/notify属于Object类的方法，但wait和notify方法调用，必须获取对象的对象级别锁，即synchronized同步方法或同步块中使用。</p>
+<p>（2）wait()方法：在其他线程调用此对象的 notify() 方法或 notifyAll() 方法前，或者其他某个线程中断当前线程，导致当前线程一直阻塞等待。等同wait(0)方法。</p>
+<p>wait(long timeout) 在其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者其他某个线程中断当前线程，或者已超过某个实际时间量前，导致当前线程等待。 单位为毫秒。</p>
+<p>void wait(long timeout, int nanos) 与 wait(long timeout) 不同的是增加了额外的纳秒级别，更精细的等待时间控制。</p>
+<p>（3）notfiy方法：唤醒在此对象监视器上等待的单个线程。选择是任意性的，并在对实现做出决定时发生。线程通过调用其中一个wait方法，在对象的监视器上等待。</p>
+<p>（4）notifyAll方法：唤醒在此对象监视器上等待的所有线程。</p>
+<p>需要：wait被执行后，会自动释放锁，而notify被执行后，锁没有立刻释放，由synchronized同步块结束时释放。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> mutex = <span class="keyword">true</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> resources = <span class="number">0</span>;</span><br><span class="line">    Random random = <span class="keyword">new</span> Random();</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">MyThreadSub</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">20</span>; i++) &#123;</span><br><span class="line">                sub();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">MyThreadAdd</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">20</span>; i++) &#123;</span><br><span class="line">                add();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">sub</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (!mutex||resources&lt;<span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">this</span>.wait();<span class="comment">//等待</span></span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;random.nextInt(<span class="number">10</span>)&amp;&amp;resources&gt;<span class="number">0</span>;i++) &#123;</span><br><span class="line">            resources--;</span><br><span class="line">            System.out.println(<span class="string">"sub thread execute,resources: "</span> + resources);</span><br><span class="line">        &#125;</span><br><span class="line">        mutex = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">this</span>.notify();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (mutex) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">this</span>.wait();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;random.nextInt(<span class="number">10</span>);i++)&#123;</span><br><span class="line">            resources++;</span><br><span class="line">            System.out.println(<span class="string">"add thread execute,resources: "</span>+resources);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        mutex = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">this</span>.notify();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Main main = <span class="keyword">new</span> Main();</span><br><span class="line">        <span class="comment">// 创建内部类</span></span><br><span class="line">        Thread threadAdd = <span class="keyword">new</span> Thread(main.<span class="keyword">new</span> MyThreadAdd());</span><br><span class="line">        Thread threadSub = <span class="keyword">new</span> Thread(main.<span class="keyword">new</span> MyThreadSub());</span><br><span class="line">        threadAdd.start();</span><br><span class="line">        threadSub.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -330,7 +307,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://gddxh.github.io/posts/e593a295/" title="innodb中各种SQL语句加锁分析">https://gddxh.github.io/posts/e593a295/</a>
+    <a href="https://gddxh.github.io/posts/85665157/" title="wait与notify">https://gddxh.github.io/posts/85665157/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -347,13 +324,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/posts/f9ba92c1/" rel="prev" title="Next+Typora图片设置">
-      <i class="fa fa-chevron-left"></i> Next+Typora图片设置
+    <a href="/posts/e6da082e/" rel="prev" title="Spring源码学习-RootBeanDefinition">
+      <i class="fa fa-chevron-left"></i> Spring源码学习-RootBeanDefinition
     </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/1d25fbbd/" rel="next" title="Java8-Lambda">
-      Java8-Lambda <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -391,7 +365,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#SELECT"><span class="nav-number">1.</span> <span class="nav-text">SELECT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UPDATE"><span class="nav-number">2.</span> <span class="nav-text">UPDATE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DELETE"><span class="nav-number">3.</span> <span class="nav-text">DELETE</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#INSERT"><span class="nav-number">4.</span> <span class="nav-text">INSERT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
