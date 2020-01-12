@@ -45,20 +45,19 @@
   };
 </script>
 
-  <meta name="description" content="前言：记录一下自己平时git命令的一些使用">
+  <meta name="description" content="前言：初学docker的一些记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git命令小结">
-<meta property="og:url" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;posts&#x2F;9bc1cf0b&#x2F;index.html">
+<meta property="og:title" content="docker学习入门">
+<meta property="og:url" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;posts&#x2F;c2dff1cb&#x2F;index.html">
 <meta property="og:site_name" content="Husky">
-<meta property="og:description" content="前言：记录一下自己平时git命令的一些使用">
+<meta property="og:description" content="前言：初学docker的一些记录">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;git%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93&#x2F;image-20200105182305052.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;git%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93&#x2F;image-20200105175227745.png">
-<meta property="og:updated_time" content="2020-01-06T15:58:40.281Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;docker%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8&#x2F;image-20200111235757347.png">
+<meta property="og:updated_time" content="2020-01-11T16:00:41.129Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;git%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93&#x2F;image-20200105182305052.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;docker%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8&#x2F;image-20200111235757347.png">
 
-<link rel="canonical" href="https://gddxh.github.io/posts/9bc1cf0b/">
+<link rel="canonical" href="https://gddxh.github.io/posts/c2dff1cb/">
 
 
 <script id="page-configurations">
@@ -72,7 +71,7 @@
   };
 </script>
 
-  <title>git命令小结 | Husky</title>
+  <title>docker学习入门 | Husky</title>
   
 
 
@@ -203,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gddxh.github.io/posts/9bc1cf0b/">
+    <link itemprop="mainEntityOfPage" href="https://gddxh.github.io/posts/c2dff1cb/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -216,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          git命令小结
+          docker学习入门
         </h1>
 
         <div class="post-meta">
@@ -226,14 +225,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-01-05 17:12:44" itemprop="dateCreated datePublished" datetime="2020-01-05T17:12:44+08:00">2020-01-05</time>
+              <time title="创建时间：2020-01-11 23:54:33" itemprop="dateCreated datePublished" datetime="2020-01-11T23:54:33+08:00">2020-01-11</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-06 23:58:40" itemprop="dateModified" datetime="2020-01-06T23:58:40+08:00">2020-01-06</time>
+                <time title="修改时间：2020-01-12 00:00:41" itemprop="dateModified" datetime="2020-01-12T00:00:41+08:00">2020-01-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,14 +259,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>784</span>
+              <span>2.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>5 分钟</span>
             </span>
 
         </div>
@@ -279,34 +278,74 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>前言：记录一下自己平时git命令的一些使用</p>
+        <p>前言：初学docker的一些记录</p>
 <a id="more"></a>
 
-<p>git 官方文档 <a href="https://git-scm.com/book/zh/v2">https://git-scm.com/book/zh/v2</a></p>
-<h4 id="git-init"><a href="#git-init" class="headerlink" title="git init"></a>git init</h4><p>初始化，生成.git隐藏文件</p>
-<h4 id="git-add"><a href="#git-add" class="headerlink" title="git add"></a>git add</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#会把本地所有untrack的文件都加入暂存区，并且会根据.gitignore做过滤，</span></span><br><span class="line">git add . </span><br><span class="line"><span class="comment"># 会忽略.gitignore,把任何文件都加入</span></span><br><span class="line">git add * </span><br><span class="line"><span class="comment"># 同git add . </span></span><br><span class="line">git add -A </span><br><span class="line"><span class="comment"># 同git add . </span></span><br><span class="line">git add --all</span><br></pre></td></tr></table></figure>
+<h4 id="docker信息"><a href="#docker信息" class="headerlink" title="docker信息"></a>docker信息</h4><p>docker：有两个版本:docker-ce(社区版)和docker-ee(企业版)<br>docker hub  镜像库</p>
+<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker docker-engine docker.io</span><br></pre></td></tr></table></figure>
+<h4 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h4><p><strong>安装docker</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo spt-get update</span><br><span class="line">sudo apt-get install docker.io</span><br><span class="line"><span class="comment"># 将/user.bin.docker.io可执行文件链接到/usr/local/bin/docker</span></span><br><span class="line">sudo ln -sf /user.bin.docker.io /usr/<span class="built_in">local</span>/bin/docker</span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/git%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93/image-20200105182305052.png" alt="image-20200105182305052"></p>
-<p>这里说一个git文件状态，首先是untracked就是未追踪状态，这是文件尚没有进行版本控制，然后git add使该文件进入缓存区，然后commit提交到本地仓库（git是记录快照并保存这个快照的索引），最后push到远程仓库</p>
-<h4 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h4><p>克隆并下载仓库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git协议</span></span><br><span class="line">git <span class="built_in">clone</span> git://xxx</span><br><span class="line"><span class="comment"># http协议</span></span><br><span class="line">git <span class="built_in">clone</span> http://xxx</span><br><span class="line"><span class="comment"># 指定分支名</span></span><br><span class="line">git <span class="built_in">clone</span> -b &lt;name&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>安装docker社区版</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure>
+<p><strong>安装docker企业版</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker-engine</span><br></pre></td></tr></table></figure>
 
-<h4 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 提交</span></span><br><span class="line">git commit -m  <span class="string">"注释"</span></span><br></pre></td></tr></table></figure>
+<p><strong>查看docker版本</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker -v</span><br></pre></td></tr></table></figure>
 
-<p>git commit -am ‘注释’ 是下列两条命令的简写，</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"注释"</span></span><br></pre></td></tr></table></figure>
+<p><strong>如果资源被锁</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/cache/apt/archives/lock</span><br><span class="line">sudo rm /var/lib/dpkg/lock</span><br></pre></td></tr></table></figure>
+<p><strong>docker-compose安装</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure>
 
-<p>但是却发现不能将新增文件进行版本控制，如下图<img src="/images/git%E5%91%BD%E4%BB%A4%E5%B0%8F%E7%BB%93/image-20200105175227745.png" alt="image-20200105175227745"></p>
-<p>发现了git commit -am ‘update’ 只能提交已经tracked即追踪过的文件，如果是新文件，必须使用分开的命令。</p>
-<h4 id="git-remote"><a href="#git-remote" class="headerlink" title="git remote"></a>git remote</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看远程库信息</span></span><br><span class="line">git remote   </span><br><span class="line"><span class="comment"># 详细查看</span></span><br><span class="line">git remote -v  </span><br><span class="line"><span class="comment"># 本地关联远程库 origin是仓库名</span></span><br><span class="line">git remote add origin 远程仓库地址</span><br></pre></td></tr></table></figure>
+<h4 id="docker基本命令"><a href="#docker基本命令" class="headerlink" title="docker基本命令"></a>docker基本命令</h4><ul>
+<li>镜像与容器的关系同类与实例<blockquote>
+<p>启动        systemctl start docker<br>守护进程重启   sudo systemctl daemon-reload<br>重启docker服务   systemctl restart  docker<br>重启docker服务  sudo service docker restart<br>关闭docker service docker stop<br>关闭docker systemctl stop docker</p>
+<p>docker search &lt;镜像名称&gt; 搜索镜像<br>docker pull &lt;镜像名称&gt;:&lt;标签&gt; 从镜像库拉取镜像<br>docker images 查看镜像<br>docker ps 查看容器<br>docker rm &lt;容器名称&gt; 删除容器<br>docker rmi &lt;镜像名称/镜像ID&gt;:&lt;标签&gt; 删除镜像<br>docker run 创建容器<br>docker logs 查看日志<br>docker load 导入镜像<br>docker save 导出镜像<br>docker commit 从容器的修改汇中创建镜像<br>docker start &lt;容器名称/容器ID&gt; 启动容器<br>docker restart &lt;容器名称/容器ID&gt; 重启容器<br>docker stop &lt;容器名称/容器ID&gt; 停止容器<br>docker attach &lt;容器名称/容器ID&gt; 连接容器<br>docker exec &lt;容器名称/容器ID&gt;从外部运行容器内的命令</p>
+<p>docker history 查看镜像历史<br>docker cp 复制文件<br>docker diff 检查容器文件的修改<br>docker inspect 查看详细信息</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>docker images 列出镜像</strong></p>
+<p><img src="/images/docker%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/image-20200111235757347.png" alt="image-20200111235757347"></p>
+<p>在列出信息中，可以看到五个字段信息:</p>
+<ul>
+<li>repository：仓库，比如 ubuntu</li>
+<li>tag:镜像的标记，比如 laster</li>
+<li>image id:它的 ID 号（唯一）</li>
+<li>created:创建时间</li>
+<li>size:镜像大小</li>
+</ul>
+<p><strong>docker run</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</span><br><span class="line">docker run &lt;选项&gt;&lt;镜像名称&gt;&lt;执行文件&gt;</span><br><span class="line"></span><br><span class="line">-t:在新容器内指定一个伪终端或终端。</span><br><span class="line"></span><br><span class="line">-i:允许你对容器内的标准输入 (STDIN) 进行交互。</span><br><span class="line"></span><br><span class="line">-d: 后台运行容器，并返回容器ID；</span><br><span class="line"></span><br><span class="line">-p: 端口映射，格式为：主机(宿主)端口:容器端口</span><br><span class="line"></span><br><span class="line">--name=<span class="string">""</span>: 为容器指定一个名称；</span><br><span class="line"></span><br><span class="line">/bin/bash 是ubuntu等Linux系统中的一个可执行文件</span><br></pre></td></tr></table></figure>
 
-<h4 id="git-rm"><a href="#git-rm" class="headerlink" title="git rm"></a>git rm</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除文件</span></span><br><span class="line">git rm filename</span><br></pre></td></tr></table></figure>
+<p>example</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run --name hello -d -p 80:80 -v /root/data:/data hello:0.1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>-p 80:80 选项将主机的80号端口与容器的80号端口连接起来，并暴露到外部。这样设置好，连接http://&lt;主机IP&gt;:80就会连接到容器的80号端口</p>
+</blockquote>
+<blockquote>
+<p>-v /root/data:/data选项将主机的/root/data目录连接到容器的/data目录。若将文件放入/root/data目录，则能从容器读取响应文件</p>
+</blockquote>
+<p><strong>docker ps</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">-a :显示所有的容器，包括未运行的、终止的容器</span><br><span class="line"></span><br><span class="line">-f :根据条件过滤显示的内容。</span><br><span class="line"></span><br><span class="line">--format :指定返回值的模板文件。</span><br><span class="line"></span><br><span class="line">-l :显示最近创建的容器。</span><br><span class="line"></span><br><span class="line">-n :列出最近创建的n个容器。</span><br><span class="line"></span><br><span class="line">--no-trunc :不截断输出。</span><br><span class="line"></span><br><span class="line">-q :静默模式，只显示容器编号。</span><br><span class="line"></span><br><span class="line">-s :显示总的文件大小。</span><br></pre></td></tr></table></figure>
 
-<h4 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 推送到远程仓库 origin是仓库名 master是分支名</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p><strong>docker images</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-a :列出本地所有的镜像（含中间映像层，默认情况下，过滤掉中间映像层）；</span><br><span class="line"></span><br><span class="line">--digests :显示镜像的摘要信息；</span><br><span class="line"></span><br><span class="line">-f :显示满足条件的镜像；</span><br><span class="line"></span><br><span class="line">--format :指定返回值的模板文件；</span><br><span class="line"></span><br><span class="line">--no-trunc :显示完整的镜像信息；</span><br><span class="line"></span><br><span class="line">-q :只显示镜像ID。</span><br></pre></td></tr></table></figure>
 
-<h4 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a>git status</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看仓库当前的状态</span></span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
+<p><strong>docker attach</strong></p>
+<p>docker attach &lt;容器名称&gt;<br>连接一个正在运行的容器，执行该命令后回车，显示Bash shell</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker attach CONTAINER ID</span><br></pre></td></tr></table></figure>
+
+<p>在Bash shell中输入exit或ctrl+D终止容器，若依次输入ctrl+P、ctrl+Q，则不会终止容器而只推出</p>
+<p><strong>查看docker</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 查看镜像历史</span><br><span class="line">docker <span class="built_in">history</span> &lt;镜像名称&gt;:&lt;标签&gt;</span><br><span class="line"></span><br><span class="line">// 显示正在运行的容器中修改文件的列表，比较标准是创建容器的镜像内容。A为添加的文件，C为修改的文件，D为删除的文件</span><br><span class="line">docker diff &lt;容器名称或容器ID&gt;</span><br><span class="line"></span><br><span class="line">// inspect 查看镜像或容器详细信息</span><br><span class="line">docker inspect &lt;镜像或容器名称或ID&gt;</span><br></pre></td></tr></table></figure>
 
 
+
+<h4 id="docker错误"><a href="#docker错误" class="headerlink" title="docker错误"></a>docker错误</h4><p><strong>权限 需使用root</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#docker进程使用Unix Socket而不是TCP端口。而默认情况下，Unix socket属于root用户，需要root权限才能访问。</span></span><br><span class="line"></span><br><span class="line">Got permission denied <span class="keyword">while</span> trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.38/images/json: dial unix /var/run/docker.sock: connect: permission denied</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -331,7 +370,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://gddxh.github.io/posts/9bc1cf0b/" title="git命令小结">https://gddxh.github.io/posts/9bc1cf0b/</a>
+    <a href="https://gddxh.github.io/posts/c2dff1cb/" title="docker学习入门">https://gddxh.github.io/posts/c2dff1cb/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -348,13 +387,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/posts/d836f991/" rel="prev" title="索引基础">
-      <i class="fa fa-chevron-left"></i> 索引基础
+    <a href="/posts/3ed68ae7/" rel="prev" title="suspend+resume+stop方法">
+      <i class="fa fa-chevron-left"></i> suspend+resume+stop方法
     </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/5eaec6ab/" rel="next" title="Exchanger源码学习">
-      Exchanger源码学习 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -392,7 +428,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#git-init"><span class="nav-number">1.</span> <span class="nav-text">git init</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-add"><span class="nav-number">2.</span> <span class="nav-text">git add</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-clone"><span class="nav-number">3.</span> <span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-commit"><span class="nav-number">4.</span> <span class="nav-text">git commit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-remote"><span class="nav-number">5.</span> <span class="nav-text">git remote</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-rm"><span class="nav-number">6.</span> <span class="nav-text">git rm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-push"><span class="nav-number">7.</span> <span class="nav-text">git push</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git-status"><span class="nav-number">8.</span> <span class="nav-text">git status</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#docker信息"><span class="nav-number">1.</span> <span class="nav-text">docker信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卸载docker"><span class="nav-number">2.</span> <span class="nav-text">卸载docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker安装"><span class="nav-number">3.</span> <span class="nav-text">docker安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker基本命令"><span class="nav-number">4.</span> <span class="nav-text">docker基本命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#docker错误"><span class="nav-number">5.</span> <span class="nav-text">docker错误</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

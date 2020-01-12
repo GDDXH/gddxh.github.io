@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>docker学习入门</title>
+    <url>/posts/c2dff1cb/</url>
+    <content><![CDATA[<p>前言：初学docker的一些记录</p>
+<a id="more"></a>
+
+<h4 id="docker信息"><a href="#docker信息" class="headerlink" title="docker信息"></a>docker信息</h4><p>docker：有两个版本:docker-ce(社区版)和docker-ee(企业版)<br>docker hub  镜像库</p>
+<h4 id="卸载docker"><a href="#卸载docker" class="headerlink" title="卸载docker"></a>卸载docker</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get remove docker docker-engine docker.io</span><br></pre></td></tr></table></figure>
+<h4 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h4><p><strong>安装docker</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo spt-get update</span><br><span class="line">sudo apt-get install docker.io</span><br><span class="line"><span class="comment"># 将/user.bin.docker.io可执行文件链接到/usr/local/bin/docker</span></span><br><span class="line">sudo ln -sf /user.bin.docker.io /usr/<span class="built_in">local</span>/bin/docker</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装docker社区版</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install docker-ce</span><br></pre></td></tr></table></figure>
+<p><strong>安装docker企业版</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install docker-engine</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看docker版本</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker -v</span><br></pre></td></tr></table></figure>
+
+<p><strong>如果资源被锁</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo rm /var/cache/apt/archives/lock</span><br><span class="line">sudo rm /var/lib/dpkg/lock</span><br></pre></td></tr></table></figure>
+<p><strong>docker-compose安装</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure>
+
+<h4 id="docker基本命令"><a href="#docker基本命令" class="headerlink" title="docker基本命令"></a>docker基本命令</h4><ul>
+<li>镜像与容器的关系同类与实例<blockquote>
+<p>启动        systemctl start docker<br>守护进程重启   sudo systemctl daemon-reload<br>重启docker服务   systemctl restart  docker<br>重启docker服务  sudo service docker restart<br>关闭docker service docker stop<br>关闭docker systemctl stop docker</p>
+<p>docker search &lt;镜像名称&gt; 搜索镜像<br>docker pull &lt;镜像名称&gt;:&lt;标签&gt; 从镜像库拉取镜像<br>docker images 查看镜像<br>docker ps 查看容器<br>docker rm &lt;容器名称&gt; 删除容器<br>docker rmi &lt;镜像名称/镜像ID&gt;:&lt;标签&gt; 删除镜像<br>docker run 创建容器<br>docker logs 查看日志<br>docker load 导入镜像<br>docker save 导出镜像<br>docker commit 从容器的修改汇中创建镜像<br>docker start &lt;容器名称/容器ID&gt; 启动容器<br>docker restart &lt;容器名称/容器ID&gt; 重启容器<br>docker stop &lt;容器名称/容器ID&gt; 停止容器<br>docker attach &lt;容器名称/容器ID&gt; 连接容器<br>docker exec &lt;容器名称/容器ID&gt;从外部运行容器内的命令</p>
+<p>docker history 查看镜像历史<br>docker cp 复制文件<br>docker diff 检查容器文件的修改<br>docker inspect 查看详细信息</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>docker images 列出镜像</strong></p>
+<p><img src="/images/docker%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8/image-20200111235757347.png" alt="image-20200111235757347"></p>
+<p>在列出信息中，可以看到五个字段信息:</p>
+<ul>
+<li>repository：仓库，比如 ubuntu</li>
+<li>tag:镜像的标记，比如 laster</li>
+<li>image id:它的 ID 号（唯一）</li>
+<li>created:创建时间</li>
+<li>size:镜像大小</li>
+</ul>
+<p><strong>docker run</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</span><br><span class="line">docker run &lt;选项&gt;&lt;镜像名称&gt;&lt;执行文件&gt;</span><br><span class="line"></span><br><span class="line">-t:在新容器内指定一个伪终端或终端。</span><br><span class="line"></span><br><span class="line">-i:允许你对容器内的标准输入 (STDIN) 进行交互。</span><br><span class="line"></span><br><span class="line">-d: 后台运行容器，并返回容器ID；</span><br><span class="line"></span><br><span class="line">-p: 端口映射，格式为：主机(宿主)端口:容器端口</span><br><span class="line"></span><br><span class="line">--name=<span class="string">""</span>: 为容器指定一个名称；</span><br><span class="line"></span><br><span class="line">/bin/bash 是ubuntu等Linux系统中的一个可执行文件</span><br></pre></td></tr></table></figure>
+
+<p>example</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo docker run --name hello -d -p 80:80 -v /root/data:/data hello:0.1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>-p 80:80 选项将主机的80号端口与容器的80号端口连接起来，并暴露到外部。这样设置好，连接http://&lt;主机IP&gt;:80就会连接到容器的80号端口</p>
+</blockquote>
+<blockquote>
+<p>-v /root/data:/data选项将主机的/root/data目录连接到容器的/data目录。若将文件放入/root/data目录，则能从容器读取响应文件</p>
+</blockquote>
+<p><strong>docker ps</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-a :显示所有的容器，包括未运行的、终止的容器</span><br><span class="line"></span><br><span class="line">-f :根据条件过滤显示的内容。</span><br><span class="line"></span><br><span class="line">--format :指定返回值的模板文件。</span><br><span class="line"></span><br><span class="line">-l :显示最近创建的容器。</span><br><span class="line"></span><br><span class="line">-n :列出最近创建的n个容器。</span><br><span class="line"></span><br><span class="line">--no-trunc :不截断输出。</span><br><span class="line"></span><br><span class="line">-q :静默模式，只显示容器编号。</span><br><span class="line"></span><br><span class="line">-s :显示总的文件大小。</span><br></pre></td></tr></table></figure>
+
+<p><strong>docker images</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-a :列出本地所有的镜像（含中间映像层，默认情况下，过滤掉中间映像层）；</span><br><span class="line"></span><br><span class="line">--digests :显示镜像的摘要信息；</span><br><span class="line"></span><br><span class="line">-f :显示满足条件的镜像；</span><br><span class="line"></span><br><span class="line">--format :指定返回值的模板文件；</span><br><span class="line"></span><br><span class="line">--no-trunc :显示完整的镜像信息；</span><br><span class="line"></span><br><span class="line">-q :只显示镜像ID。</span><br></pre></td></tr></table></figure>
+
+<p><strong>docker attach</strong></p>
+<p>docker attach &lt;容器名称&gt;<br>连接一个正在运行的容器，执行该命令后回车，显示Bash shell</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker attach CONTAINER ID</span><br></pre></td></tr></table></figure>
+
+<p>在Bash shell中输入exit或ctrl+D终止容器，若依次输入ctrl+P、ctrl+Q，则不会终止容器而只推出</p>
+<p><strong>查看docker</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// 查看镜像历史</span><br><span class="line">docker <span class="built_in">history</span> &lt;镜像名称&gt;:&lt;标签&gt;</span><br><span class="line"></span><br><span class="line">// 显示正在运行的容器中修改文件的列表，比较标准是创建容器的镜像内容。A为添加的文件，C为修改的文件，D为删除的文件</span><br><span class="line">docker diff &lt;容器名称或容器ID&gt;</span><br><span class="line"></span><br><span class="line">// inspect 查看镜像或容器详细信息</span><br><span class="line">docker inspect &lt;镜像或容器名称或ID&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="docker错误"><a href="#docker错误" class="headerlink" title="docker错误"></a>docker错误</h4><p><strong>权限 需使用root</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#docker进程使用Unix Socket而不是TCP端口。而默认情况下，Unix socket属于root用户，需要root权限才能访问。</span></span><br><span class="line"></span><br><span class="line">Got permission denied <span class="keyword">while</span> trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.38/images/json: dial unix /var/run/docker.sock: connect: permission denied</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>杂</category>
+      </categories>
+  </entry>
+  <entry>
     <title>suspend+resume+stop方法</title>
     <url>/posts/3ed68ae7/</url>
     <content><![CDATA[<p>前言：学习Thread的suspend、resume、stop方法</p>
