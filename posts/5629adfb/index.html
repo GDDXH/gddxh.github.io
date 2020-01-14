@@ -52,11 +52,12 @@
 <meta property="og:site_name" content="Husky">
 <meta property="og:description" content="前言：ThreadLocal源码学习">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;posts&#x2F;5629adfb&#x2F;9BBCB2413A9A43F9A73713E5070DEAA5">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;ThreadLocal%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200114235514208.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;ThreadLocal%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200113160654664.png">
-<meta property="og:updated_time" content="2020-01-13T08:07:27.188Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;ThreadLocal%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200114235549226.png">
+<meta property="og:updated_time" content="2020-01-14T15:57:25.583Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;posts&#x2F;5629adfb&#x2F;9BBCB2413A9A43F9A73713E5070DEAA5">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;gddxh.github.io&#x2F;images&#x2F;ThreadLocal%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0&#x2F;image-20200114235514208.png">
 
 <link rel="canonical" href="https://gddxh.github.io/posts/5629adfb/">
 
@@ -147,7 +148,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">90</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">92</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -225,10 +226,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-01-13 16:00:45 / 修改时间：16:07:27" itemprop="dateCreated datePublished" datetime="2020-01-13T16:00:45+08:00">2020-01-13</time>
+              <time title="创建时间：2020-01-13 16:00:45" itemprop="dateCreated datePublished" datetime="2020-01-13T16:00:45+08:00">2020-01-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-14 23:57:25" itemprop="dateModified" datetime="2020-01-14T23:57:25+08:00">2020-01-14</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -254,7 +261,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.8k</span>
+              <span>5.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -278,16 +285,16 @@
 <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>ThreadLocal采用线程隔离的方式存放数据（存放的值是线程封闭，线程间互斥），可以避免多线程之间出现数据访问冲突。</p>
 <p>对于同一个static ThreadLocal，不同线程只能从中get，set，remove自己的变量，而不会影响其他线程的变量。</p>
 <p>所以ThreadLocal重要作用在于线程内（单个线程内部）的数据共享，保证各个线程间数据安全，每个线程的数据不会被另外线程访问和破坏，多线程间数据隔离</p>
-<p><strong>常用方法</strong></p>
+<p>PS：个人建议先学习ThreadLocal的静态内部类ThreadLocalMap,然后再来看ThreadLocal，ThreadLocal比较简单，复杂的地方都在ThreadLocalMap <strong>常用方法</strong></p>
 <ul>
-<li>ThreadLocal.get: 以当前线程为key获取数据。</li>
-<li>ThreadLocal.set: 以当前线程为key存放数据</li>
-<li>ThreadLocal.remove: 以当前线程为key删除数据。</li>
+<li>ThreadLocal.get: 以ThreadLocal为key获取数据。</li>
+<li>ThreadLocal.set: 以ThreadLocal为key存放数据</li>
+<li>ThreadLocal.remove: 以ThreadLocal为key删除数据。</li>
 <li>ThreadLocal.initialValue:</li>
 </ul>
 <p>对于多线程资源共享的问题，同步机制采用了“以时间换空间”的方式，而ThreadLocal采用了“以空间换时间”的方式，使用其内部静态类ThreadLocalMap存储线程的变量</p>
 <p><strong>类图</strong></p>
-<p><img src="9BBCB2413A9A43F9A73713E5070DEAA5" alt="image"></p>
+<p><img src="/images/ThreadLocal%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/image-20200114235514208.png" alt="image-20200114235514208"></p>
 <h4 id="字段"><a href="#字段" class="headerlink" title="字段"></a>字段</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 连续生成的哈希码之间的差异,ThreadLocal实例都会getAndAdd(0x61c88647)。</span></span><br><span class="line"><span class="comment">* 为什么要这么做？因为ThreadLocal储存数据使用ThreadLocalMap，是一个哈希表（散列），为了提高哈希的性能，需要将元素尽可能分散，而这个值0x61c88647，经过实践，发现能使散列值最优分布</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> HASH_INCREMENT = <span class="number">0x61c88647</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 下一个hashcode，原子更新，初始为0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> AtomicInteger nextHashCode =</span><br><span class="line"><span class="keyword">new</span> AtomicInteger();</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 每个线程的hashcode，用于计算散列值，学习ThreadLocalMap源码可以发现，map底层是数组实现</span></span><br><span class="line"><span class="comment"> * threadLocalHashCode与数组大小取模就可得到相应下标，在该下标处存储数据</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> threadLocalHashCode = nextHashCode();</span><br></pre></td></tr></table></figure>
 
 <h4 id="SuppliedThreadLocal"><a href="#SuppliedThreadLocal" class="headerlink" title="SuppliedThreadLocal"></a>SuppliedThreadLocal</h4><p>SuppliedThreadLocal是ThreadLocal的一个扩展，用来支持java8函数式接口等新特性</p>
@@ -321,7 +328,7 @@
 <h4 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h4><p>删除ThreadLocal中该线程</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">remove</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ThreadLocalMap m = getMap(Thread.currentThread());</span><br><span class="line">    <span class="keyword">if</span> (m != <span class="keyword">null</span>)</span><br><span class="line">        m.remove(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="set"><a href="#set" class="headerlink" title="set"></a>set</h4><p>设置此线程的数据</p>
+<h4 id="set"><a href="#set" class="headerlink" title="set"></a>set</h4><p>设置此线程的数据，注意set传的参数是this，即当前ThreadLocal对象，所以说ThreadLocalMap是以ThreadLocal对象为key</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">set</span><span class="params">(T value)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 获取当前线程</span></span><br><span class="line">    Thread t = Thread.currentThread();</span><br><span class="line">    <span class="comment">// 获取ThreadLocalMap</span></span><br><span class="line">    ThreadLocalMap map = getMap(t);</span><br><span class="line">    <span class="comment">// 如果ThreadLocalMap!=null就设置数据，==null则调用createMap创建map</span></span><br><span class="line">    <span class="keyword">if</span> (map != <span class="keyword">null</span>)</span><br><span class="line">        map.set(<span class="keyword">this</span>, value);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        createMap(t, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="setInitialValue"><a href="#setInitialValue" class="headerlink" title="setInitialValue"></a>setInitialValue</h4><p>初始化，由get方法调用</p>
@@ -334,6 +341,9 @@
 
 <p><img src="/images/ThreadLocal%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/image-20200113160654664.png" alt="image-20200113160654664"></p>
 <p>可以看到各线程中的变量都是相互独立、互不影响</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>Thread、ThreadLocal、ThreadLocalMap三者关系如下图</p>
+<p><img src="/images/ThreadLocal%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/image-20200114235549226.png" alt="image-20200114235549226"></p>
+<p>线程调用ThreadLocal对象get、set，第一次调用set时会创建一个ThreadLocalMap对象，注意这个对象是属于线程的。然后以ThreadLocal对象为key存储数据，这里也要注意</p>
 
     </div>
 
@@ -420,7 +430,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字段"><span class="nav-number">2.</span> <span class="nav-text">字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SuppliedThreadLocal"><span class="nav-number">3.</span> <span class="nav-text">SuppliedThreadLocal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ThreadLocalMap"><span class="nav-number">4.</span> <span class="nav-text">ThreadLocalMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造方法"><span class="nav-number">5.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#childValue"><span class="nav-number">6.</span> <span class="nav-text">childValue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#createInheritedMap"><span class="nav-number">7.</span> <span class="nav-text">createInheritedMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#createMap"><span class="nav-number">8.</span> <span class="nav-text">createMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#get"><span class="nav-number">9.</span> <span class="nav-text">get</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getMap"><span class="nav-number">10.</span> <span class="nav-text">getMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#initialValue"><span class="nav-number">11.</span> <span class="nav-text">initialValue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nextHashCode"><span class="nav-number">12.</span> <span class="nav-text">nextHashCode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#remove"><span class="nav-number">13.</span> <span class="nav-text">remove</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#set"><span class="nav-number">14.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setInitialValue"><span class="nav-number">15.</span> <span class="nav-text">setInitialValue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#withInitial"><span class="nav-number">16.</span> <span class="nav-text">withInitial</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简单实例"><span class="nav-number">17.</span> <span class="nav-text">简单实例</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字段"><span class="nav-number">2.</span> <span class="nav-text">字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SuppliedThreadLocal"><span class="nav-number">3.</span> <span class="nav-text">SuppliedThreadLocal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ThreadLocalMap"><span class="nav-number">4.</span> <span class="nav-text">ThreadLocalMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造方法"><span class="nav-number">5.</span> <span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#childValue"><span class="nav-number">6.</span> <span class="nav-text">childValue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#createInheritedMap"><span class="nav-number">7.</span> <span class="nav-text">createInheritedMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#createMap"><span class="nav-number">8.</span> <span class="nav-text">createMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#get"><span class="nav-number">9.</span> <span class="nav-text">get</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getMap"><span class="nav-number">10.</span> <span class="nav-text">getMap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#initialValue"><span class="nav-number">11.</span> <span class="nav-text">initialValue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nextHashCode"><span class="nav-number">12.</span> <span class="nav-text">nextHashCode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#remove"><span class="nav-number">13.</span> <span class="nav-text">remove</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#set"><span class="nav-number">14.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setInitialValue"><span class="nav-number">15.</span> <span class="nav-text">setInitialValue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#withInitial"><span class="nav-number">16.</span> <span class="nav-text">withInitial</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简单实例"><span class="nav-number">17.</span> <span class="nav-text">简单实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">18.</span> <span class="nav-text">总结</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -436,7 +446,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">90</span>
+          <span class="site-state-item-count">92</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -486,13 +496,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
 	站点总字数：
-    <span title="站点总字数">383k</span>
+    <span title="站点总字数">388k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
 	站点阅读时长 ≈
-    <span title="站点阅读时长">10:38</span>
+    <span title="站点阅读时长">10:47</span>
   
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
